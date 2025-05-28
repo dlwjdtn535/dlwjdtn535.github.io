@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+js/react-build/
+_site/
+dist/
+build/
+
+# Jekyll
+_sass/
+_includes/
+_layouts/
+_posts/
+_data/
+
+# Config files
+*.config.js
+*.config.ts
+
+# Lock files
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Git
+.git/
+
+# Temporary files
+*.tmp
+*.temp 

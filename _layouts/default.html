@@ -1,24 +1,57 @@
 <!DOCTYPE html>
-<html>
-{% include head.html %}
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="{{ '/img/favicon.ico' | relative_url }}">
+  
+  <!-- Bootstrap Core CSS -->
+  <link href="{{ '/css/bootstrap.min.css' | relative_url }}" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link href="{{ '/css/freelancer.css' | relative_url }}" rel="stylesheet">
+  
+  <!-- Vite 빌드된 CSS -->
+  <link href="{{ '/js/react-build/app.css' | relative_url }}" rel="stylesheet">
+  
+  <!-- Custom Fonts -->
+  <link href="{{ '/font-awesome/css/font-awesome.min.css' | relative_url }}" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+</head>
 
 <body id="page-top" class="index">
-  {% include nav.html %}
-  {% include header.html %}
-  {% include portfolio_grid.html %}
-  {% include about.html %}
+  <!-- React App Root - SPA 형태로 전체 페이지 렌더링 -->
+  <div id="react-app"></div>
 
-  {% if site.contact == "static" %}
-  {% include contact_static.html %}
-  {% elsif site.contact == "disqus" %}
-  {% include contact_disqus.html %}
-  {% else %}
-  {% include contact.html %}
-  {% endif %}
+  <!-- Jekyll 콘텐츠 (React 미지원 브라우저용 fallback) -->
+  <noscript>
+    {{ content }}
+  </noscript>
 
-  {% include footer.html %}
-  {% include modals.html %}
-  {% include js.html %}
+  <!-- jQuery -->
+  <script src="{{ '/js/jquery-1.11.0.js' | relative_url }}"></script>
+  
+  <!-- Bootstrap Core JavaScript -->
+  <script src="{{ '/js/bootstrap.min.js' | relative_url }}"></script>
+  
+  <!-- Plugin JavaScript -->
+  <script src="{{ '/js/jquery.easing.min.js' | relative_url }}"></script>
+  <script src="{{ '/js/classie.js' | relative_url }}"></script>
+  <script src="{{ '/js/cbpAnimatedHeader.js' | relative_url }}"></script>
+  
+  <!-- Contact Form JavaScript -->
+  <script src="{{ '/js/jqBootstrapValidation.js' | relative_url }}"></script>
+  <script src="{{ '/js/contact_me_static.js' | relative_url }}"></script>
+  
+  <!-- Custom Theme JavaScript -->
+  <script src="{{ '/js/freelancer.js' | relative_url }}"></script>
+  
+  <!-- Vite 빌드된 React 앱 -->
+  <script src="{{ '/js/react-build/app.bundle.js' | relative_url }}"></script>
 </body>
-
-</html>
+</html> 
