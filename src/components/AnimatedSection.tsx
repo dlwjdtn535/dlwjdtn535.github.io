@@ -1,10 +1,17 @@
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import React from 'react';
+
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 interface AnimatedSectionProps {
   children: React.ReactNode;
   className?: string;
-  animation?: 'fadeInUp' | 'fadeInLeft' | 'fadeInRight' | 'fadeIn' | 'scaleIn' | 'slideInUp';
+  animation?:
+    | 'fadeInUp'
+    | 'fadeInLeft'
+    | 'fadeInRight'
+    | 'fadeIn'
+    | 'scaleIn'
+    | 'slideInUp';
   delay?: number;
   duration?: string;
 }
@@ -24,34 +31,36 @@ export const AnimatedSection: React.FC<AnimatedSectionProps> = ({
 
   const getAnimationClasses = () => {
     const baseClasses = `transition-all ${duration} ease-out`;
-    const delayClass = delay > 0 ? `delay-${delay}` : '';
 
     if (!isVisible) {
       switch (animation) {
         case 'fadeInUp':
-          return `${baseClasses} ${delayClass} opacity-0 translate-y-16`;
+          return `${baseClasses} opacity-0 translate-y-16`;
         case 'fadeInLeft':
-          return `${baseClasses} ${delayClass} opacity-0 -translate-x-16`;
+          return `${baseClasses} opacity-0 -translate-x-16`;
         case 'fadeInRight':
-          return `${baseClasses} ${delayClass} opacity-0 translate-x-16`;
+          return `${baseClasses} opacity-0 translate-x-16`;
         case 'fadeIn':
-          return `${baseClasses} ${delayClass} opacity-0`;
+          return `${baseClasses} opacity-0`;
         case 'scaleIn':
-          return `${baseClasses} ${delayClass} opacity-0 scale-95`;
+          return `${baseClasses} opacity-0 scale-95`;
         case 'slideInUp':
-          return `${baseClasses} ${delayClass} opacity-0 translate-y-8`;
+          return `${baseClasses} opacity-0 translate-y-8`;
         default:
-          return `${baseClasses} ${delayClass} opacity-0 translate-y-16`;
+          return `${baseClasses} opacity-0 translate-y-16`;
       }
     }
 
-    return `${baseClasses} ${delayClass} opacity-100 translate-y-0 translate-x-0 scale-100`;
+    return `${baseClasses} opacity-100 translate-y-0 translate-x-0 scale-100`;
   };
 
   return (
     <div
       ref={ref as React.RefObject<HTMLDivElement>}
       className={`${getAnimationClasses()} ${className}`}
+      style={{
+        transitionDelay: `${delay}ms`,
+      }}
     >
       {children}
     </div>
@@ -110,12 +119,10 @@ export const RevealOnScroll: React.FC<RevealOnScrollProps> = ({
     <div
       ref={ref as React.RefObject<HTMLDivElement>}
       className={`transition-all duration-1000 ease-out ${
-        isVisible
-          ? 'opacity-100 translate-y-0'
-          : 'opacity-0 translate-y-8'
+        isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
       } ${className}`}
     >
       {children}
     </div>
   );
-}; 
+};

@@ -2,20 +2,20 @@
 export interface ContactFormData {
   name: string;
   email: string;
-  projectType: ProjectType;
-  budget: BudgetRange;
   message: string;
 }
 
 export interface FormStatus {
-  loading: boolean;
-  success: boolean;
-  error: boolean;
+  type?: string;
+  message?: string;
+  loading?: boolean;
+  success?: boolean;
+  error?: boolean;
 }
 
 export type ProjectType =
   | '웹사이트 개발'
-  | '웹 애플리케이션'
+  | '웹 애플리케이션 개발'
   | '모바일 앱'
   | 'API 개발'
   | '기타';

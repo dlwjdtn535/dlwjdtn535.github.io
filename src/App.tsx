@@ -2,12 +2,11 @@ import React from 'react';
 
 import About from '@/components/About';
 import ContactForm from '@/components/ContactForm';
-import DemoSection from '@/components/DemoSection';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import Navigation from '@/components/Navigation';
-import PortfolioGallery from '@/components/PortfolioGallery';
 import ServicesSection from '@/components/ServicesSection';
+
 import { ScrollProgress } from './components/ScrollProgress';
 
 const App: React.FC = () => {
@@ -17,31 +16,17 @@ const App: React.FC = () => {
       {/* Navigation */}
       <Navigation />
 
-      {/* Header */}
+      {/* Header - 첫인상과 소개 */}
       <Header />
 
-      {/* Portfolio Section */}
-      <PortfolioGallery />
-
-      {/* Demo Section */}
-      <DemoSection />
-
-      {/* Services Section */}
-      <ServicesSection />
-
-      {/* About Section */}
+      {/* About - 나의 경력과 업적으로 신뢰성 구축 */}
       <About />
 
-      {/* Contact Section */}
-      <section id='contact' className='bg-blue-600 py-20'>
-        <div className='container mx-auto px-4'>
-          <div className='mb-12 text-center'>
-            <h2 className='mb-4 text-4xl font-bold text-white'>Contact Me</h2>
-            <div className='mx-auto mb-8 h-1 w-20 bg-white'></div>
-          </div>
-          <ContactForm />
-        </div>
-      </section>
+      {/* Services - 제공 가능한 서비스와 솔루션 (라이브 데모 포함) */}
+      <ServicesSection />
+
+      {/* Contact */}
+      <ContactForm />
 
       {/* Footer */}
       <Footer />
