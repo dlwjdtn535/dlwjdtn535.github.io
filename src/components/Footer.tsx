@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { AnimatedSection } from './AnimatedSection';
 
 const Footer: React.FC = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -55,7 +54,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-slate-900 to-black text-white overflow-hidden">
-      {/* 배경 그래디언트 효과 */}
+      {/* 간소화된 배경 효과 */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
       
@@ -64,7 +63,7 @@ const Footer: React.FC = () => {
         <div className="pt-16 pb-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* 브랜드 섹션 */}
-            <AnimatedSection animation="fadeInUp" delay={100} className="lg:col-span-1">
+            <div className="lg:col-span-1">
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                   Portfolio
@@ -108,24 +107,22 @@ const Footer: React.FC = () => {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-500/25 group"
+                      className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors duration-200 group"
                       aria-label={social.name}
                     >
-                      <div className="text-gray-400 group-hover:text-white transition-colors duration-300">
+                      <div className="text-gray-400 group-hover:text-white transition-colors duration-200">
                         {social.icon}
                       </div>
                     </a>
                   ))}
                 </div>
               </div>
-            </AnimatedSection>
+            </div>
 
             {/* 링크 섹션들 */}
             {footerLinks.map((section, sectionIndex) => (
-              <AnimatedSection
+              <div
                 key={section.title}
-                animation="fadeInUp"
-                delay={200 + sectionIndex * 100}
                 className="space-y-4"
               >
                 <h4 className="text-lg font-semibold text-white mb-4">
@@ -138,22 +135,22 @@ const Footer: React.FC = () => {
                         href={link.href}
                         target={link.href.startsWith('http') ? '_blank' : undefined}
                         rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                        className="text-gray-400 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block group"
+                        className="text-gray-400 hover:text-white transition-colors duration-200 group"
                       >
-                        <span className="border-b border-transparent group-hover:border-blue-400 transition-all duration-300">
+                        <span className="border-b border-transparent group-hover:border-blue-400 transition-colors duration-200">
                           {link.name}
                         </span>
                       </a>
                     </li>
                   ))}
                 </ul>
-              </AnimatedSection>
+              </div>
             ))}
           </div>
         </div>
 
         {/* 하단 구분선 및 저작권 */}
-        <AnimatedSection animation="fadeInUp" delay={600}>
+        <div>
           <div className="border-t border-gray-800 pt-8 pb-6">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <div className="text-gray-400 text-sm">
@@ -168,23 +165,23 @@ const Footer: React.FC = () => {
               <div className="flex items-center space-x-6">
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-white text-sm transition-colors duration-300"
+                  className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
                 >
                   개인정보처리방침
                 </a>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-white text-sm transition-colors duration-300"
+                  className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
                 >
                   이용약관
                 </a>
                 <button
                   onClick={scrollToTop}
-                  className="group flex items-center space-x-2 text-gray-400 hover:text-white transition-all duration-300 text-sm"
+                  className="group flex items-center space-x-2 text-gray-400 hover:text-white transition-colors duration-200 text-sm"
                 >
                   <span>맨 위로</span>
-                  <div className="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-colors duration-300">
-                    <svg className="w-3 h-3 transform group-hover:-translate-y-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-colors duration-200">
+                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
                     </svg>
                   </div>
@@ -192,17 +189,17 @@ const Footer: React.FC = () => {
               </div>
             </div>
           </div>
-        </AnimatedSection>
+        </div>
       </div>
 
       {/* 하단 장식적 그래디언트 */}
       <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" />
 
-      {/* Scroll to Top Button */}
+      {/* 간소화된 Scroll to Top Button */}
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className='fixed bottom-8 right-8 z-50 h-12 w-12 transform rounded-full bg-blue-600 text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-blue-700 hover:shadow-xl'
+          className='fixed bottom-8 right-8 z-50 h-12 w-12 rounded-full bg-blue-600 text-white shadow-lg transition-colors duration-200 hover:bg-blue-700'
           aria-label='맨 위로 스크롤'
         >
           <svg

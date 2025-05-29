@@ -28,6 +28,10 @@ export type BudgetRange =
   | '협의 후 결정';
 
 // 포트폴리오 관련 타입들
+export interface ProjectStats {
+  [key: string]: string;
+}
+
 export interface Project {
   id: number;
   title: string;
@@ -37,6 +41,7 @@ export interface Project {
   description: string;
   duration: string;
   features: string[];
+  stats?: ProjectStats;
 }
 
 export type ProjectCategory = 'web' | 'mobile' | 'ai' | 'blockchain';

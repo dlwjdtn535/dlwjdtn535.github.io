@@ -1,44 +1,309 @@
 ---
 layout: default
-title: "개발자 포트폴리오"
-description: "Jekyll + React + TypeScript + Tailwind CSS로 제작된 현대적인 포트폴리오 웹사이트"
+title: "이정수 - 시니어 풀스택 개발자 포트폴리오"
+description: "2014년부터 10년 이상의 실무 경험을 가진 시니어 풀스택 개발자 이정수의 포트폴리오. Spring Boot, Java, React, AWS 전문. 교육, 부동산, 커머스, 핀테크, 모빌리티 등 다양한 도메인에서 30여 개 프로젝트 완료."
 ---
 
-<!-- React가 비활성화된 경우를 위한 기본 콘텐츠 -->
-<section class="text-center" style="padding: 100px 0;">
-  <div class="container">
-    <h1 class="mb-4">개발자 포트폴리오</h1>
-    <p class="lead mb-5">React + TypeScript + Tailwind CSS로 제작된 현대적인 포트폴리오</p>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이정수 - 시니어 풀스택 개발자 포트폴리오</title>
+  <meta name="description" content="2014년부터 10년 이상의 실무 경험을 가진 시니어 풀스택 개발자 이정수의 포트폴리오. Spring Boot, Java, React, AWS 전문. 교육, 부동산, 커머스, 핀테크, 모빌리티 등 다양한 도메인에서 30여 개 프로젝트 완료.">
+  <meta name="keywords" content="이정수, 풀스택 개발자, Spring Boot, Java, React, AWS, 시니어 개발자, 백엔드 개발, 프론트엔드 개발, PostgreSQL, Docker, 프리랜서 개발자">
+  <meta name="author" content="이정수">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="이정수 - 시니어 풀스택 개발자 포트폴리오">
+  <meta property="og:description" content="10년 이상의 실무 경험과 30여 개 프로젝트 완료. Spring Boot, React, AWS 전문 시니어 개발자">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dlwjdtn535.github.io">
+  <meta property="og:image" content="https://dlwjdtn535.github.io/img/og-image.jpg">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="이정수 - 시니어 풀스택 개발자 포트폴리오">
+  <meta name="twitter:description" content="10년 이상의 실무 경험과 30여 개 프로젝트 완료. Spring Boot, React, AWS 전문 시니어 개발자">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sans': ['Noto Sans KR', 'sans-serif'],
+          },
+          animation: {
+            'fadeInUp': 'fadeInUp 0.8s ease-out forwards',
+            'fadeInLeft': 'fadeInLeft 0.8s ease-out forwards',
+            'fadeInRight': 'fadeInRight 0.8s ease-out forwards',
+            'scaleIn': 'scaleIn 0.6s ease-out forwards',
+            'slideInUp': 'slideInUp 0.6s ease-out forwards',
+            'bounce-slow': 'bounce 2s infinite',
+            'spin-slow': 'spin 3s linear infinite',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            },
+            fadeInLeft: {
+              '0%': { opacity: '0', transform: 'translateX(-30px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' }
+            },
+            fadeInRight: {
+              '0%': { opacity: '0', transform: 'translateX(30px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' }
+            },
+            scaleIn: {
+              '0%': { opacity: '0', transform: 'scale(0.9)' },
+              '100%': { opacity: '1', transform: 'scale(1)' }
+            },
+            slideInUp: {
+              '0%': { opacity: '0', transform: 'translateY(100%)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            }
+          },
+          colors: {
+            primary: {
+              50: '#eff6ff',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom Styles -->
+  <style>
+    /* 스크롤바 스타일링 */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
     
-    <div class="alert alert-info">
-      <strong>안내:</strong> 이 페이지는 React로 구동됩니다. 
-      JavaScript가 비활성화되어 있거나 지원되지 않는 브라우저를 사용하고 계십니다.
-    </div>
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
     
-    <h2 class="mt-5 mb-4">연락처</h2>
-    <p>
-      <strong>이메일:</strong> contact@example.com<br>
-      <strong>GitHub:</strong> <a href="https://github.com/dlwjdtn535" target="_blank">dlwjdtn535</a>
-    </p>
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
+      border-radius: 4px;
+    }
     
-    <h2 class="mt-5 mb-4">주요 기술 스택</h2>
-    <div class="row">
-      <div class="col-md-3 mb-3">
-        <h4>Frontend</h4>
-        <p>React, TypeScript, Tailwind CSS</p>
-      </div>
-      <div class="col-md-3 mb-3">
-        <h4>Backend</h4>
-        <p>Node.js, Python, Express</p>
-      </div>
-      <div class="col-md-3 mb-3">
-        <h4>Database</h4>
-        <p>PostgreSQL, MongoDB, Redis</p>
-      </div>
-      <div class="col-md-3 mb-3">
-        <h4>DevOps</h4>
-        <p>AWS, Docker, CI/CD</p>
-      </div>
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(to bottom, #2563eb, #7c3aed);
+    }
+    
+    /* 부드러운 스크롤 */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* 초기 애니메이션 상태 */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-out;
+    }
+    
+    .animate-on-scroll.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* 로딩 상태 */
+    .loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, #1e293b 0%, #1e40af 50%, #6366f1 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      opacity: 1;
+      transition: opacity 0.5s ease-out;
+    }
+    
+    .loading.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    .loading-spinner {
+      width: 50px;
+      height: 50px;
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      border-top: 4px solid #ffffff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    
+    /* 반응형 텍스트 */
+    @media (max-width: 640px) {
+      .text-responsive {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+      }
+    }
+    
+    /* 포커스 아웃라인 제거 및 접근성 */
+    *:focus {
+      outline: 2px solid #3b82f6;
+      outline-offset: 2px;
+    }
+    
+    /* 다크모드 대응 */
+    @media (prefers-color-scheme: dark) {
+      ::-webkit-scrollbar-track {
+        background: #1f2937;
+      }
+    }
+  </style>
+  
+  <!-- JSON-LD 구조화 데이터 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "이정수",
+    "jobTitle": "시니어 풀스택 개발자",
+    "description": "10년 이상의 실무 경험을 가진 시니어 풀스택 개발자. Spring Boot, Java, React, AWS 전문.",
+    "url": "https://dlwjdtn535.github.io",
+    "sameAs": [
+      "https://github.com/dlwjdtn535"
+    ],
+    "knowsAbout": [
+      "Spring Boot",
+      "Java",
+      "React",
+      "Next.js",
+      "TypeScript",
+      "AWS",
+      "PostgreSQL",
+      "Docker",
+      "Jenkins",
+      "Elasticsearch",
+      "Redis",
+      "Flutter",
+      "Node.js",
+      "Python"
+    ],
+    "email": "dlwjdtn535@gmail.com"
+  }
+  </script>
+</head>
+<body class="font-sans antialiased bg-white text-gray-900">
+  <!-- 로딩 화면 -->
+  <div id="loading" class="loading">
+    <div class="text-center">
+      <div class="loading-spinner mx-auto mb-4"></div>
+      <div class="text-white text-lg font-medium">Portfolio Loading...</div>
     </div>
   </div>
-</section> 
+
+  <!-- 메인 애플리케이션 -->
+  <div id="app"></div>
+  
+  <!-- React 및 기타 스크립트 -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  
+  <!-- 메인 애플리케이션 스크립트 -->
+  <script type="text/babel" src="src/main.tsx"></script>
+  
+  <!-- 초기화 스크립트 -->
+  <script>
+    // 페이지 로딩 완료 후 처리
+    window.addEventListener('load', function() {
+      // 로딩 화면 숨기기
+      setTimeout(() => {
+        const loading = document.getElementById('loading');
+        if (loading) {
+          loading.classList.add('hide');
+          setTimeout(() => {
+            loading.style.display = 'none';
+          }, 500);
+        }
+      }, 1000);
+      
+      // 스크롤 애니메이션 관찰자 설정
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+          }
+        });
+      }, observerOptions);
+      
+      // 애니메이션 대상 요소들 관찰 시작
+      document.querySelectorAll('.animate-on-scroll').forEach(el => {
+        observer.observe(el);
+      });
+    });
+    
+    // 부드러운 스크롤 네비게이션
+    function smoothScrollTo(elementId) {
+      const element = document.getElementById(elementId);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }
+    
+    // 성능 최적화: 디바운스된 스크롤 핸들러
+    let scrollTimeout;
+    window.addEventListener('scroll', function() {
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+      }
+      scrollTimeout = setTimeout(function() {
+        // 스크롤 위치에 따른 추가 처리가 필요한 경우 여기에 구현
+      }, 10);
+    });
+    
+    // 에러 핸들링
+    window.addEventListener('error', function(e) {
+      console.error('Application Error:', e.error);
+      // 필요한 경우 에러 리포팅 서비스로 전송
+    });
+  </script>
+  
+  <!-- Google Analytics (필요한 경우) -->
+  <!-- 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+  -->
+</body>
+</html> 

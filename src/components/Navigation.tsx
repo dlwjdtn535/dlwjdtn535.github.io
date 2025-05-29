@@ -35,14 +35,16 @@ const Navigation: React.FC = () => {
       <div className='container mx-auto px-4'>
         <div className='flex items-center justify-between py-4'>
           {/* Brand */}
-          <button
-            onClick={() => handleSmoothScroll('page-top')}
-            className={`text-2xl font-bold transition-colors duration-300 ${
-              isScrolled ? 'text-gray-800' : 'text-white'
-            }`}
-          >
-            개발자 포트폴리오
-          </button>
+          <div className="flex items-center">
+            <button
+              onClick={() => handleSmoothScroll('page-top')}
+              className={`text-xl font-bold transition-colors duration-300 ${
+                isScrolled ? 'text-gray-800' : 'text-white'
+              }`}
+            >
+              💻
+            </button>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -81,6 +83,22 @@ const Navigation: React.FC = () => {
               Portfolio
             </button>
             <button
+              onClick={() => handleSmoothScroll('demo')}
+              className={`font-medium transition-colors duration-300 hover:text-blue-500 ${
+                isScrolled ? 'text-gray-800' : 'text-white'
+              }`}
+            >
+              Demo
+            </button>
+            <button
+              onClick={() => handleSmoothScroll('services')}
+              className={`font-medium transition-colors duration-300 hover:text-blue-500 ${
+                isScrolled ? 'text-gray-800' : 'text-white'
+              }`}
+            >
+              Services
+            </button>
+            <button
               onClick={() => handleSmoothScroll('about')}
               className={`font-medium transition-colors duration-300 hover:text-blue-500 ${
                 isScrolled ? 'text-gray-800' : 'text-white'
@@ -102,7 +120,7 @@ const Navigation: React.FC = () => {
         {/* Mobile Menu */}
         <div
           className={`overflow-hidden transition-all duration-300 lg:hidden ${
-            isNavOpen ? 'max-h-48 pb-4' : 'max-h-0'
+            isNavOpen ? 'max-h-60 pb-4' : 'max-h-0'
           }`}
         >
           <div className='flex flex-col space-y-4'>
@@ -113,6 +131,22 @@ const Navigation: React.FC = () => {
               }`}
             >
               Portfolio
+            </button>
+            <button
+              onClick={() => handleSmoothScroll('demo')}
+              className={`text-left font-medium transition-colors duration-300 hover:text-blue-500 ${
+                isScrolled ? 'text-gray-800' : 'text-white'
+              }`}
+            >
+              Demo
+            </button>
+            <button
+              onClick={() => handleSmoothScroll('services')}
+              className={`text-left font-medium transition-colors duration-300 hover:text-blue-500 ${
+                isScrolled ? 'text-gray-800' : 'text-white'
+              }`}
+            >
+              Services
             </button>
             <button
               onClick={() => handleSmoothScroll('about')}
