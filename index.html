@@ -176,13 +176,17 @@ description: "2014년부터 10년 이상의 실무 경험을 가진 시니어 �
       left: 0;
       right: 0;
       bottom: 0;
-      background: linear-gradient(135deg, #1e293b 0%, #1e40af 50%, #6366f1 100%);
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #1e40af 50%, #6366f1 75%, #8b5cf6 100%);
+      background-size: 400% 400%;
+      animation: gradientShift 8s ease-in-out infinite;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       z-index: 9999;
       opacity: 1;
-      transition: opacity 0.5s ease-out;
+      transition: opacity 0.8s ease-out;
+      overflow: hidden;
     }
     
     .loading.hide {
@@ -190,13 +194,214 @@ description: "2014년부터 10년 이상의 실무 경험을 가진 시니어 �
       pointer-events: none;
     }
     
-    .loading-spinner {
-      width: 50px;
-      height: 50px;
-      border: 4px solid rgba(255, 255, 255, 0.3);
-      border-top: 4px solid #ffffff;
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    
+    /* 로딩 로고 */
+    .loading-logo {
+      font-size: 4rem;
+      font-weight: 800;
+      background: linear-gradient(45deg, #60a5fa, #a855f7, #ec4899, #f59e0b);
+      background-size: 300% 300%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: logoGlow 3s ease-in-out infinite, textShimmer 2s ease-in-out infinite;
+      margin-bottom: 2rem;
+      text-align: center;
+      line-height: 1;
+    }
+    
+    @keyframes logoGlow {
+      0%, 100% { 
+        filter: drop-shadow(0 0 20px rgba(96, 165, 250, 0.5));
+        transform: scale(1);
+      }
+      50% { 
+        filter: drop-shadow(0 0 40px rgba(168, 85, 247, 0.8));
+        transform: scale(1.05);
+      }
+    }
+    
+    @keyframes textShimmer {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    
+    /* 메인 로더 */
+    .loading-container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    .modern-loader {
+      position: relative;
+      width: 120px;
+      height: 120px;
+    }
+    
+    .loader-ring {
+      position: absolute;
+      width: 100%;
+      height: 100%;
       border-radius: 50%;
-      animation: spin 1s linear infinite;
+      border: 3px solid transparent;
+    }
+    
+    .loader-ring:nth-child(1) {
+      border-top: 3px solid #60a5fa;
+      animation: rotate 2s linear infinite;
+    }
+    
+    .loader-ring:nth-child(2) {
+      border-right: 3px solid #a855f7;
+      animation: rotate 1.5s linear infinite reverse;
+      width: 90%;
+      height: 90%;
+      top: 5%;
+      left: 5%;
+    }
+    
+    .loader-ring:nth-child(3) {
+      border-bottom: 3px solid #ec4899;
+      animation: rotate 3s linear infinite;
+      width: 80%;
+      height: 80%;
+      top: 10%;
+      left: 10%;
+    }
+    
+    .loader-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 20px;
+      height: 20px;
+      background: linear-gradient(45deg, #60a5fa, #a855f7);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    @keyframes pulse {
+      0%, 100% { 
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0 0 20px rgba(96, 165, 250, 0.5);
+      }
+      50% { 
+        transform: translate(-50%, -50%) scale(1.2);
+        box-shadow: 0 0 40px rgba(168, 85, 247, 0.8);
+      }
+    }
+    
+    /* 로딩 텍스트 */
+    .loading-text {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 1rem;
+      animation: fadeInOut 2s ease-in-out infinite;
+    }
+    
+    .loading-subtitle {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 1rem;
+      font-weight: 400;
+      text-align: center;
+      letter-spacing: 0.1em;
+    }
+    
+    @keyframes fadeInOut {
+      0%, 100% { opacity: 0.7; }
+      50% { opacity: 1; }
+    }
+    
+    /* 프로그레스 바 */
+    .loading-progress {
+      width: 300px;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 2px;
+      overflow: hidden;
+      margin-top: 2rem;
+    }
+    
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, #60a5fa, #a855f7, #ec4899);
+      background-size: 200% 100%;
+      animation: progressFill 4s ease-in-out infinite, progressShimmer 1.5s ease-in-out infinite;
+      border-radius: 2px;
+    }
+    
+    @keyframes progressFill {
+      0% { width: 0%; }
+      50% { width: 70%; }
+      100% { width: 100%; }
+    }
+    
+    @keyframes progressShimmer {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    
+    /* 파티클 효과 */
+    .loading-particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    
+    .particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 50%;
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    .particle:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .particle:nth-child(2) { left: 20%; animation-delay: 1s; }
+    .particle:nth-child(3) { left: 30%; animation-delay: 2s; }
+    .particle:nth-child(4) { left: 40%; animation-delay: 3s; }
+    .particle:nth-child(5) { left: 50%; animation-delay: 4s; }
+    .particle:nth-child(6) { left: 60%; animation-delay: 5s; }
+    .particle:nth-child(7) { left: 70%; animation-delay: 0.5s; }
+    .particle:nth-child(8) { left: 80%; animation-delay: 1.5s; }
+    .particle:nth-child(9) { left: 90%; animation-delay: 2.5s; }
+    
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+        transform: translateY(90vh) scale(1);
+      }
+      90% {
+        opacity: 1;
+        transform: translateY(10vh) scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(0) scale(0);
+      }
     }
     
     /* 반응형 텍스트 */
@@ -519,9 +724,36 @@ description: "2014년부터 10년 이상의 실무 경험을 가진 시니어 �
 <body class="font-sans antialiased bg-white text-gray-900">
   <!-- 로딩 화면 -->
   <div id="loading" class="loading">
-    <div class="text-center">
-      <div class="loading-spinner mx-auto mb-4"></div>
-      <div class="text-white text-lg font-medium">Portfolio Loading...</div>
+    <!-- 파티클 배경 -->
+    <div class="loading-particles">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+    
+    <!-- 메인 컨테이너 -->
+    <div class="loading-container">
+      <!-- 현대적인 로더 -->
+      <div class="modern-loader">
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+        <div class="loader-center"></div>
+      </div>
+      
+      <!-- 로딩 텍스트 -->
+      <div class="loading-text">포트폴리오를 불러오는 중</div>
+
+      <!-- 프로그레스 바 -->
+      <div class="loading-progress">
+        <div class="progress-bar"></div>
+      </div>
     </div>
   </div>
 
@@ -540,16 +772,34 @@ description: "2014년부터 10년 이상의 실무 경험을 가진 시니어 �
   <script>
     // 페이지 로딩 완료 후 처리
     window.addEventListener('load', function() {
-      // 로딩 화면 숨기기
+      // 동적 로딩 텍스트 변경
+      const loadingTexts = [
+        '포트폴리오를 불러오는 중',
+        '프로젝트 정보 로딩 중',
+        '서비스 데이터 준비 중',
+        '거의 완료되었습니다'
+      ];
+      let textIndex = 0;
+      const loadingTextElement = document.querySelector('.loading-text');
+      
+      const textInterval = setInterval(() => {
+        if (loadingTextElement && textIndex < loadingTexts.length - 1) {
+          textIndex++;
+          loadingTextElement.textContent = loadingTexts[textIndex];
+        }
+      }, 800);
+      
+      // 로딩 화면 숨기기 (더 긴 시간으로 조정)
       setTimeout(() => {
+        clearInterval(textInterval);
         const loading = document.getElementById('loading');
         if (loading) {
           loading.classList.add('hide');
           setTimeout(() => {
             loading.style.display = 'none';
-          }, 500);
+          }, 800);
         }
-      }, 1000);
+      }, 3200);
       
       // 스크롤 애니메이션 관찰자 설정
       const observerOptions = {
