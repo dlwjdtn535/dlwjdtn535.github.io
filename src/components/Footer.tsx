@@ -121,7 +121,7 @@ const Footer: React.FC = () => {
                       ),
                       href: 'mailto:dlwjdtn5624@naver.com',
                     },
-                  ].map((social, index) => (
+                  ].map(social => (
                     <a
                       key={social.name}
                       href={social.href}
@@ -140,13 +140,13 @@ const Footer: React.FC = () => {
             </div>
 
             {/* 링크 섹션들 */}
-            {footerLinks.map((section, sectionIndex) => (
+            {footerLinks.map(section => (
               <div key={section.title} className='space-y-4'>
                 <h4 className='mb-4 text-lg font-semibold text-white'>
                   {section.title}
                 </h4>
                 <ul className='space-y-3'>
-                  {section.links.map((link, linkIndex) => (
+                  {section.links.map(link => (
                     <li key={link.name}>
                       <a
                         href={link.href}

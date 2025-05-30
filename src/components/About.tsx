@@ -232,7 +232,7 @@ export const About: React.FC = () => {
         period: '2024.07 ~ 2024.10',
         company: '아우토크립트 (이동의 자유)',
         role: '프리랜서',
-        description: '자율주행 관련 플랫폼 개발',
+        description: '노약자 및 장애인을 위한 주행 시스템 개발',
         achievements: [
           '주행 경유지 하차, 주행 롤백 개발',
           '어드민 주행상세, 회차지 경로선택 관련 비즈니스 개발',
@@ -240,16 +240,8 @@ export const About: React.FC = () => {
           '어드민 스케줄링 주행, 승객, 예약 데이터 수집 개발',
         ],
         color: 'from-blue-400 to-cyan-500',
-        images: [
-          'https://images.unsplash.com/photo-1558618666-f87c5b2d8e15?w=800&h=500&fit=crop',
-          'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&h=500&fit=crop',
-          'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=500&fit=crop',
-        ],
-        imageTitles: [
-          '자율주행 관제 시스템',
-          '실시간 모니터링 대시보드',
-          '주행 데이터 분석',
-        ],
+        images: ['/public/images/projects/auto_1.png'],
+        imageTitles: ['주행 관제 시스템'],
         tech: ['Spring Boot', 'React', 'AWS', 'PostgreSQL'],
       },
       {
@@ -266,14 +258,18 @@ export const About: React.FC = () => {
         ],
         color: 'from-emerald-400 to-green-500',
         images: [
-          'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=500&fit=crop',
-          'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=500&fit=crop',
-          'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop',
+          '/public/images/projects/criee_5.PNG',
+          '/public/images/projects/criee_1.PNG',
+          '/public/images/projects/criee_2.PNG',
+          '/public/images/projects/criee_3.PNG',
+          '/public/images/projects/criee_4.PNG',
         ],
         imageTitles: [
-          '명품 거래 플랫폼',
+          '웹 메인',
+          '앱스토어 화면',
           '실시간 견적 시스템',
-          '모바일 앱 인터페이스',
+          '물품 배송 시스템',
+          '실시간 리뷰',
         ],
         tech: ['React Native', 'Spring Boot', 'AWS S3', 'CDN'],
       },
@@ -292,12 +288,22 @@ export const About: React.FC = () => {
         ],
         color: 'from-purple-400 to-pink-500',
         images: [
-          'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop',
-          'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&h=500&fit=crop',
-          'https://images.unsplash.com/photo-1556741533-6e6a62bd8b49?w=800&h=500&fit=crop',
+          '/public/images/projects/lush_1.png',
+          '/public/images/projects/lush_2.png',
+          '/public/images/projects/lush_3.png',
+          '/public/images/projects/lush_6.png',
+          '/public/images/projects/lush_4.png',
+          '/public/images/projects/lush_5.png',
         ],
-        imageTitles: ['커머스 메인 페이지', '결제 시스템', 'QR 쿠폰 서비스'],
-        tech: ['React', 'Spring Boot', 'JWT', 'POS연동', 'QR'],
+        imageTitles: [
+          '메인',
+          '제품 상세',
+          '쿠폰 상세',
+          '러쉬 페이',
+          'UMS 메인',
+          'UMS 발송',
+        ],
+        tech: ['Spring Boot', 'JWT', 'POS연동', 'QR', 'UMS'],
       },
       {
         period: '2023.11 ~ 2024.01',
@@ -314,15 +320,11 @@ export const About: React.FC = () => {
         ],
         color: 'from-orange-400 to-red-500',
         images: [
-          'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=500&fit=crop',
-          'https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=800&h=500&fit=crop',
-          'https://images.unsplash.com/photo-1556742111-a301076d9d18?w=800&h=500&fit=crop',
+          '/public/images/projects/fresh_3.jpeg',
+          '/public/images/projects/fresh_2.jpeg',
+          '/public/images/projects/fresh_1.jpeg',
         ],
-        imageTitles: [
-          '프레시 세일 메인',
-          '상품 상세 페이지',
-          '장바구니 & 결제',
-        ],
+        imageTitles: ['메인', '상품 상세 페이지', '장바구니 & 결제'],
         tech: ['Next.js 13', 'Spring Boot 3.x', 'Redis', 'Jenkins'],
       },
       {
@@ -338,9 +340,11 @@ export const About: React.FC = () => {
         ],
         color: 'from-cyan-400 to-blue-500',
         images: [
-          'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=500&fit=crop',
-          'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop',
-          'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop',
+          '/public/images/projects/malohae_1.png',
+          '/public/images/projects/malohae_2.png',
+          '/public/images/projects/malohae_3.png',
+          '/public/images/projects/malohae_4.png',
+          '/public/images/projects/malohae_5.png',
         ],
         imageTitles: ['장부 관리 앱', '통계 대시보드', '월별 달력 뷰'],
         tech: ['Flutter', 'Spring Boot', 'AWS EC2', 'RDS'],
@@ -360,39 +364,59 @@ export const About: React.FC = () => {
         ],
         color: 'from-indigo-400 to-purple-500',
         images: [
-          'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=500&fit=crop',
-          'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=800&h=500&fit=crop',
-          'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=500&fit=crop',
+          '/public/images/projects/theblack_1.png',
+          '/public/images/projects/theblack_2.png',
+          '/public/images/projects/theblack_3.png',
+          '/public/images/projects/theblack_4.png',
+          '/public/images/projects/theblack_5.png',
+          '/public/images/projects/theblack_6.png',
+          '/public/images/projects/theblack_7.png',
         ],
         imageTitles: [
-          '라이브 스트리밍 플랫폼',
-          '스트리밍 관리 대시보드',
-          '미디어 인코딩 시스템',
+          '메인',
+          '라이브 스트리밍',
+          '라이브 챗',
+          '라이브 보이스',
+          '포토카드 갤러리 1',
+          '포토카드 갤러리 2',
+          '라이브 스트리밍',
         ],
         tech: ['AWS SQS', 'SendBird SDK', 'HLS', 'Terraform'],
       },
       {
         period: '2023.04 ~ 2023.06',
         company: '하이데브 (메타포스트)',
-        role: '프리랜서 (PL)',
+        role: '프리랜서',
         description: 'NFT 커뮤니티 플랫폼 개발',
         achievements: [
           'AWS Beanstalk, RDS, S3, SSL 배포환경 초기구성',
-          '커뮤니티 공간 관리 개발',
+          '커뮤니티 & 유니버스 공간 관리 개발',
           '유저 팔로우, 맨션 기능 개발',
           'NFT 토큰 조회 API 개발',
           '통합검색 기능 개발',
         ],
         color: 'from-pink-400 to-rose-500',
         images: [
-          'https://images.unsplash.com/photo-1642104704074-907c0698cbd9?w=800&h=500&fit=crop',
-          'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=500&fit=crop',
-          'https://images.unsplash.com/photo-1620321023374-d1a68fbc720d?w=800&h=500&fit=crop',
+          '/public/images/projects/metapost_4.png',
+          '/public/images/projects/metapost_1.png',
+          '/public/images/projects/metapost_2.png',
+          '/public/images/projects/metapost_3.png',
+          '/public/images/projects/metapost_5.png',
+          '/public/images/projects/metapost_6.png',
+          '/public/images/projects/metapost_7.png',
+          '/public/images/projects/metapost_8.png',
+          '/public/images/projects/metapost_9.png',
         ],
         imageTitles: [
-          'NFT 마켓플레이스',
-          '커뮤니티 플랫폼',
-          '토큰 조회 시스템',
+          '메인 페이지',
+          '검색 결과',
+          '캘린더',
+          '포스트',
+          '유니버스',
+          '커뮤니티',
+          '커뮤니티',
+          '유저 정보',
+          '이벤트',
         ],
         tech: ['AWS Beanstalk', 'NFT API', 'React', 'Spring Boot'],
       },
@@ -413,7 +437,7 @@ export const About: React.FC = () => {
           'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop',
           'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=500&fit=crop',
         ],
-        imageTitles: ['담보감정 시스템', '레거시 모던화', '관리자 대시보드'],
+        imageTitles: ['담보감정 시스템', '담보감정 시스템', '담보감정 시스템'],
         tech: ['Spring Boot', 'ES6', 'Legacy Migration', 'ActiveX'],
       },
       {
@@ -423,17 +447,14 @@ export const About: React.FC = () => {
         description: 'MSA 환경 신규 설계 및 구축',
         achievements: [
           'MSA 환경 신규설계 & 구성',
+          'Oauth2.0, JWT 기반 인증/인가 시스템 개발',
           'Gitlab CI/CD 환경 구성',
           '테스트 & 빌드, OAS3, RESTDOC API 문서 자동화 구성',
           '로그인, 운영자권한관리, 회원관리 API 개발',
         ],
         color: 'from-teal-400 to-cyan-500',
-        images: [
-          'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=800&h=500&fit=crop',
-          'https://images.unsplash.com/photo-1560472355-536de3962603?w=800&h=500&fit=crop',
-          'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=500&fit=crop',
-        ],
-        imageTitles: ['백오피스 시스템', 'CI/CD 파이프라인', 'API 문서 자동화'],
+        images: ['/public/images/projects/hiphoper_1.png'],
+        imageTitles: ['힙합퍼 메인 페이지'],
         tech: ['MSA', 'GitLab CI/CD', 'OAS3', 'REST DOC'],
       },
       {
@@ -448,14 +469,14 @@ export const About: React.FC = () => {
         ],
         color: 'from-violet-400 to-purple-500',
         images: [
-          'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=500&fit=crop',
-          'https://images.unsplash.com/photo-1457305237443-44c3d5a30b89?w=800&h=500&fit=crop',
-          'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=500&fit=crop',
+          '/public/images/projects/tour_1.png',
+          '/public/images/projects/tour_2.png',
+          '/public/images/projects/tour_3.png',
         ],
         imageTitles: [
           '통합검색 시스템',
-          '검색 결과 페이지',
-          '검색 분석 대시보드',
+          '검색 결과 페이지 1',
+          '검색 결과 페이지 2',
         ],
         tech: ['Elasticsearch', 'Spring Boot', 'Search Optimization'],
       },
@@ -472,12 +493,18 @@ export const About: React.FC = () => {
         ],
         color: 'from-green-400 to-emerald-500',
         images: [
-          'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop',
-          'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&h=500&fit=crop',
-          'https://images.unsplash.com/photo-1460317442991-0ec209397118?w=800&h=500&fit=crop',
+          '/public/images/projects/dabang_2.png',
+          '/public/images/projects/dabang_1.png',
+          '/public/images/projects/dabang_3.png',
+          '/public/images/projects/dabang_4.png',
         ],
-        imageTitles: ['다방 메인 플랫폼', '매물 검색 시스템', '추천 알고리즘'],
-        tech: ['Spring Boot', 'Big Data', 'Recommendation', 'Redis'],
+        imageTitles: [
+          '매물 검색 1',
+          '매물 검색 2',
+          '매물 즐겨찾기 영역',
+          '매물 추천 및 통계',
+        ],
+        tech: ['Spring Boot', 'React', 'Recommendation', 'Elasticsearch'],
       },
       {
         period: '2018.01 ~ 2020.02',
@@ -492,18 +519,26 @@ export const About: React.FC = () => {
         ],
         color: 'from-blue-400 to-indigo-500',
         images: [
-          'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=500&fit=crop',
-          'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=500&fit=crop',
-          'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=500&fit=crop',
+          '/public/images/projects/naon_1.png',
+          '/public/images/projects/naon_2.png',
+          '/public/images/projects/naon_3.png',
+          '/public/images/projects/naon_4.png',
+          '/public/images/projects/naon_5.png',
         ],
-        imageTitles: ['그룹웨어 포털', 'SAP 연동 시스템', '전자결재 시스템'],
+        imageTitles: [
+          '포털 메인',
+          '스마트 워크',
+          '캘린더',
+          '근태 관리',
+          '전자 결재',
+        ],
         tech: ['SAP 연동', 'Groupware', 'Portal', 'Workflow'],
       },
       {
         period: '2014.02 ~ 2017.05',
         company: '아카넷',
         role: '주임연구원',
-        description: '교육 플랫폼 개발 (첫 직장)',
+        description: '교육 플랫폼 개발 및 학사 시스템 구축',
         achievements: [
           'LMS (Learning Management System) 개발',
           '학사시스템 포탈 솔루션 개발',
@@ -512,11 +547,10 @@ export const About: React.FC = () => {
         ],
         color: 'from-slate-400 to-gray-500',
         images: [
-          'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=500&fit=crop',
-          'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=500&fit=crop',
-          'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=500&fit=crop',
+          '/public/images/projects/acanet_1.png',
+          '/public/images/projects/acanet_2.png',
         ],
-        imageTitles: ['LMS 플랫폼', '학사관리 시스템', '온라인 강의실'],
+        imageTitles: ['LMS 플랫폼', '학사관리 시스템'],
         tech: ['LMS', 'Education Portal', 'Content Management', 'Java'],
       },
     ],
@@ -561,7 +595,7 @@ export const About: React.FC = () => {
         {/* 통계 카드 */}
         <AnimatedSection animation='fadeInUp' delay={100} className='mb-16'>
           <div className='mx-auto grid max-w-4xl grid-cols-2 gap-4 md:grid-cols-4'>
-            {stats.map((stat, index) => (
+            {stats.map(stat => (
               <AnimatedSection
                 key={stat.label}
                 animation='scaleIn'
@@ -783,7 +817,7 @@ export const About: React.FC = () => {
           </div>
 
           <div className='mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
-            {skills.map((skillGroup, groupIndex) => (
+            {skills.map(skillGroup => (
               <AnimatedSection
                 key={skillGroup.category}
                 animation='fadeInUp'
@@ -796,7 +830,7 @@ export const About: React.FC = () => {
                   </h4>
 
                   <div className='space-y-4'>
-                    {skillGroup.technologies.map((tech, techIndex) => (
+                    {skillGroup.technologies.map(tech => (
                       <div key={tech.name} className='relative'>
                         <div className='mb-2 flex items-center justify-between'>
                           <span className='text-sm font-medium text-gray-200'>
@@ -879,6 +913,8 @@ export const About: React.FC = () => {
                   description: 'Bybit 거래소 API 연동 서버',
                   badge:
                     'https://smithery.ai/badge/@dlwjdtn535/mcp-bybit-server',
+                  smitheryUrl:
+                    'https://smithery.ai/server/@dlwjdtn535/mcp-bybit-server',
                   githubUrl: 'https://github.com/dlwjdtn535/mcp-bybit-server',
                   tags: ['Crypto API', 'Trading'],
                   icon: '🪙',
@@ -888,6 +924,8 @@ export const About: React.FC = () => {
                   description: 'Chrome 브라우저 자동화 서버',
                   badge:
                     'https://smithery.ai/badge/@dlwjdtn535/mcp-chrome-server',
+                  smitheryUrl:
+                    'https://smithery.ai/server/@dlwjdtn535/mcp-chrome-server',
                   githubUrl: 'https://github.com/dlwjdtn535/mcp-chrome-server',
                   tags: ['Automation', 'Browser'],
                   icon: '🌐',
@@ -897,6 +935,8 @@ export const About: React.FC = () => {
                   description: 'Chrome 고급 통합 기능 서버',
                   badge:
                     'https://smithery.ai/badge/@dlwjdtn535/mcp-chrome-integration',
+                  smitheryUrl:
+                    'https://smithery.ai/server/@dlwjdtn535/mcp-chrome-integration',
                   githubUrl:
                     'https://github.com/dlwjdtn535/mcp-chrome-integration',
                   tags: ['Integration', 'Advanced'],
@@ -916,11 +956,17 @@ export const About: React.FC = () => {
                       {project.description}
                     </p>
 
-                    <img
-                      src={project.badge}
-                      alt={`MCP ${project.title}`}
-                      className='mx-auto mb-3 h-5'
-                    />
+                    <a
+                      href={project.smitheryUrl}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <img
+                        src={project.badge}
+                        alt={`MCP ${project.title}`}
+                        className='mx-auto mb-3 h-5'
+                      />
+                    </a>
 
                     <div className='mb-3 flex flex-wrap justify-center gap-1'>
                       {project.tags.map((tag, tagIndex) => (
