@@ -242,159 +242,137 @@ export const About: React.FC = () => {
   const experiences = useMemo(
     () => [
       {
-        period: '2024.07 ~ 2024.10',
-        company: '아우토크립트 (이동의 자유)',
-        role: '프리랜서',
-        description: '노약자 및 장애인을 위한 주행 시스템 개발',
+        period: '2014.02 ~ 2017.05',
+        company: '아카넷',
+        role: '주임연구원',
+        description: '교육 플랫폼 개발 및 학사 시스템 구축',
         achievements: [
-          '주행 경유지 하차, 주행 롤백 개발',
-          '어드민 주행상세, 회차지 경로선택 관련 비즈니스 개발',
-          '어드민 통계/업무일지 비즈니스 개발',
-          '어드민 스케줄링 주행, 승객, 예약 데이터 수집 개발',
+          'LMS (Learning Management System) 개발',
+          '학사시스템 포탈 솔루션 개발',
+          '교육 콘텐츠 관리 시스템 구축',
+          '학습자 진도 관리 및 평가 시스템 개발',
         ],
-        color: 'from-blue-400 to-cyan-500',
-        images: ['/public/images/projects/auto_1.png'],
-        imageTitles: ['주행 관제 시스템'],
-        tech: ['Spring Boot', 'React', 'AWS', 'PostgreSQL'],
+        color: 'from-slate-400 to-gray-500',
+        images: [
+          '/public/images/projects/acanet_1.png',
+          '/public/images/projects/acanet_2.png',
+        ],
+        imageTitles: ['LMS 플랫폼', '학사관리 시스템'],
+        tech: ['LMS', 'Education Portal', 'Content Management', 'Java'],
       },
       {
-        period: '2024.07 ~ 2024.08',
-        company: '달라컴퍼니 (중고명품 크리)',
-        role: '프리랜서',
-        description: '중고명품 거래 플랫폼 개발',
+        period: '2018.01 ~ 2020.02',
+        company: '나온소프트',
+        role: '대리',
+        description: '그룹웨어 커스터마이징 및 포털 개발',
         achievements: [
-          '리뷰, 실시간 견적 리스트 화면 & API 개발.',
-          '앱 사진 앨범 불러오기 네이티브 개발.',
-          '앱(IOS & Android) 하이브리드 앱 개발 및 심사 & 스토어 출시.',
-          '앱 멀티웹뷰 방식 개발.',
-          'AWS S3 + cloud front(CDN) 파일 업로드 인프라 구축.',
+          '그룹웨어 커스터마이징 개발',
+          '전자결재 SAP 연동 시스템 구축',
+          '그룹웨어 포털 개발',
+          '업무 프로세스 자동화 구현',
         ],
-        color: 'from-emerald-400 to-green-500',
+        color: 'from-blue-400 to-indigo-500',
         images: [
-          '/public/images/projects/criee_5.PNG',
-          '/public/images/projects/criee_1.PNG',
-          '/public/images/projects/criee_2.PNG',
-          '/public/images/projects/criee_3.PNG',
-          '/public/images/projects/criee_4.PNG',
+          '/public/images/projects/naon_1.png',
+          '/public/images/projects/naon_2.png',
+          '/public/images/projects/naon_3.png',
+          '/public/images/projects/naon_4.png',
+          '/public/images/projects/naon_5.png',
         ],
         imageTitles: [
-          '웹 메인',
-          '앱스토어 화면',
-          '실시간 견적 시스템',
-          '물품 배송 시스템',
-          '실시간 리뷰',
+          '포털 메인',
+          '스마트 워크',
+          '캘린더',
+          '근태 관리',
+          '전자 결재',
         ],
-        tech: ['React Native', 'Spring Boot', 'AWS S3', 'CDN'],
+        tech: ['SAP 연동', 'Groupware', 'Portal', 'Workflow'],
       },
       {
-        period: '2022.12 ~ 2024.06',
-        company: '러쉬코리아 (유지보수)',
-        role: '프리랜서',
-        description: '커머스 자사몰 유지보수 및 신규 기능 개발',
+        period: '2020.03 ~ 2021.05',
+        company: '스테이션3 (다방)',
+        role: '대리',
+        description: '부동산 플랫폼 백엔드 코어 개발',
         achievements: [
-          '커머스 자사몰 사이트 유지보수',
-          '이니시스 결제 프로세스 리뉴얼',
-          '주문/결제 선물하기, 모바일 상품권 신규 개발',
-          '통합 메시지 서버 구축 (UMS)',
-          '애플 로그인 신규 개발 및 JWT 전환',
-          '러쉬쿠폰 QR 서비스, POS연동 개발',
+          '부동산 플랫폼 (다방) 백엔드 코어개발',
+          '대용량 데이터 처리 시스템 구축',
+          '부동산 매물 관리 API 개발',
+          '사용자 맞춤 추천 시스템 구현',
         ],
-        color: 'from-purple-400 to-pink-500',
+        color: 'from-green-400 to-emerald-500',
         images: [
-          '/public/images/projects/lush_1.png',
-          '/public/images/projects/lush_2.png',
-          '/public/images/projects/lush_3.png',
-          '/public/images/projects/lush_6.png',
-          '/public/images/projects/lush_4.png',
-          '/public/images/projects/lush_5.png',
+          '/public/images/projects/dabang_2.png',
+          '/public/images/projects/dabang_1.png',
+          '/public/images/projects/dabang_3.png',
+          '/public/images/projects/dabang_4.png',
         ],
         imageTitles: [
-          '메인',
-          '제품 상세',
-          '쿠폰 상세',
-          '러쉬 페이',
-          'UMS 메인',
-          'UMS 발송',
+          '매물 검색 1',
+          '매물 검색 2',
+          '매물 즐겨찾기 영역',
+          '매물 추천 및 통계',
         ],
-        tech: ['Spring Boot', 'JWT', 'POS연동', 'QR', 'UMS'],
+        tech: ['Spring Boot', 'React', 'Recommendation', 'Elasticsearch'],
       },
       {
-        period: '2023.11 ~ 2024.01',
-        company: '러쉬코리아 (프레시 세일)',
+        period: '2021.08 ~ 2021.12',
+        company: '하나투어',
         role: '프리랜서',
-        description: '대용량 트래픽 대응 프레시 세일 전용 쇼핑몰 신규 구축',
+        description: '레거시 통합검색 엔진 리뉴얼',
         achievements: [
-          '백엔드(Spring Boot 3.x), 프론트(React 18+, Next 13+) 병행 개발',
-          '주문 결제 프로세스 신규구축 (이니시스 PG 연동), 취소 환불',
-          '재고 Redis 연동(대용량 트래픽 대응)',
-          '상품 목록, 상세, 검색 및 장바구니 기능',
-          'JWT 로그인 (Recoil-Persist)',
-          'Jenkins CI/CD 환경 구성',
+          '기존 레거시 통합검색 엔진 (솔트룩스) 분석',
+          '신규 통합검색 엔진(Elasticsearch) 으로 리뉴얼 개발',
+          '검색 성능 최적화 및 사용자 경험 개선',
         ],
-        color: 'from-orange-400 to-red-500',
+        color: 'from-violet-400 to-purple-500',
         images: [
-          '/public/images/projects/fresh_3.jpeg',
-          '/public/images/projects/fresh_2.jpeg',
-          '/public/images/projects/fresh_1.jpeg',
-        ],
-        imageTitles: ['메인', '상품 상세 페이지', '장바구니 & 결제'],
-        tech: ['Next.js 13', 'Spring Boot 3.x', 'Redis', 'Jenkins'],
-      },
-      {
-        period: '2023.10 ~ 2023.11',
-        company: '아카랩 (말로해장부)',
-        role: '프리랜서',
-        description: '운송사 장부관리 앱 신규 개발',
-        achievements: [
-          'Spring Boot 장부 관리 (등록, 수정, 조회, 삭제) API 개발',
-          'Flutter 장부 관리 모바일 화면 개발',
-          '월별 통계 달력 조회, 장부 상세 조회, 장부 기록 수정 기능 구현',
-          'AWS EC2, RDS 구성',
-        ],
-        color: 'from-cyan-400 to-blue-500',
-        images: [
-          '/public/images/projects/malohae_1.png',
-          '/public/images/projects/malohae_2.png',
-          '/public/images/projects/malohae_3.png',
-          '/public/images/projects/malohae_4.png',
-          '/public/images/projects/malohae_5.png',
-        ],
-        imageTitles: ['장부 관리 앱', '통계 대시보드', '월별 달력 뷰'],
-        tech: ['Flutter', 'Spring Boot', 'AWS EC2', 'RDS'],
-      },
-      {
-        period: '2023.08 ~ 2023.10',
-        company: '하이데브 (더블랙레이블)',
-        role: '프리랜서',
-        description: '라이브 스트리밍 서비스 신규 구축',
-        achievements: [
-          'AWS SQS, RDS, S3, SSM, SECRETS 연동 개발',
-          '라이브 스트리밍 서비스 신규 구축',
-          'Mp3 HLS지원 확장자 인코딩 컨슈머 개발',
-          'SendBird(영상 스트리밍 서비스) SDK 연동',
-          'Terraform, LocalStack 환경구성',
-          'S3 업/다운 스트리밍 비즈니스 개발',
-        ],
-        color: 'from-indigo-400 to-purple-500',
-        images: [
-          '/public/images/projects/theblack_1.png',
-          '/public/images/projects/theblack_2.png',
-          '/public/images/projects/theblack_3.png',
-          '/public/images/projects/theblack_4.png',
-          '/public/images/projects/theblack_5.png',
-          '/public/images/projects/theblack_6.png',
-          '/public/images/projects/theblack_7.png',
+          '/public/images/projects/tour_1.png',
+          '/public/images/projects/tour_2.png',
+          '/public/images/projects/tour_3.png',
         ],
         imageTitles: [
-          '메인',
-          '라이브 스트리밍',
-          '라이브 챗',
-          '라이브 보이스',
-          '포토카드 갤러리 1',
-          '포토카드 갤러리 2',
-          '라이브 스트리밍',
+          '통합검색 시스템',
+          '검색 결과 페이지 1',
+          '검색 결과 페이지 2',
         ],
-        tech: ['AWS SQS', 'SendBird SDK', 'HLS', 'Terraform'],
+        tech: ['Elasticsearch', 'Spring Boot', 'Search Optimization'],
+      },
+      {
+        period: '2022.01 ~ 2022.05',
+        company: '바바패션 (힙합퍼 백오피스)',
+        role: '프리랜서 (PL)',
+        description: 'MSA 환경 신규 설계 및 구축',
+        achievements: [
+          'MSA 환경 신규설계 & 구성',
+          'Oauth2.0, JWT 기반 인증/인가 시스템 개발',
+          'Gitlab CI/CD 환경 구성',
+          '테스트 & 빌드, OAS3, RESTDOC API 문서 자동화 구성',
+          '로그인, 운영자권한관리, 회원관리 API 개발',
+        ],
+        color: 'from-teal-400 to-cyan-500',
+        images: ['/public/images/projects/hiphoper_1.png'],
+        imageTitles: ['힙합퍼 메인 페이지'],
+        tech: ['MSA', 'GitLab CI/CD', 'OAS3', 'REST DOC'],
+      },
+      {
+        period: '2022.07 ~ 2022.11',
+        company: '하이트진로 (담보감정시스템)',
+        role: '프리랜서 (PL)',
+        description: 'ActiveX 기반 레거시 시스템 모던화',
+        achievements: [
+          'ActiveX 기반 솔루션 & 서비스 분석',
+          'Spring Boot 신규 환경 구성',
+          'Front/Back End 기존기능 단위 개발',
+          'ActiveX 솔루션(Ezgen) ES6 기반으로 엔터프라이즈 개발',
+        ],
+        color: 'from-yellow-400 to-orange-500',
+        images: [
+          'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop',
+          'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop',
+          'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=500&fit=crop',
+        ],
+        imageTitles: ['담보감정 시스템', '담보감정 시스템', '담보감정 시스템'],
+        tech: ['Spring Boot', 'ES6', 'Legacy Migration', 'ActiveX'],
       },
       {
         period: '2023.04 ~ 2023.06',
@@ -434,137 +412,159 @@ export const About: React.FC = () => {
         tech: ['AWS Beanstalk', 'NFT API', 'React', 'Spring Boot'],
       },
       {
-        period: '2022.07 ~ 2022.11',
-        company: '하이트진로 (담보감정시스템)',
-        role: '프리랜서 (PL)',
-        description: 'ActiveX 기반 레거시 시스템 모던화',
-        achievements: [
-          'ActiveX 기반 솔루션 & 서비스 분석',
-          'Spring Boot 신규 환경 구성',
-          'Front/Back End 기존기능 단위 개발',
-          'ActiveX 솔루션(Ezgen) ES6 기반으로 엔터프라이즈 개발',
-        ],
-        color: 'from-yellow-400 to-orange-500',
-        images: [
-          'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop',
-          'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop',
-          'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=500&fit=crop',
-        ],
-        imageTitles: ['담보감정 시스템', '담보감정 시스템', '담보감정 시스템'],
-        tech: ['Spring Boot', 'ES6', 'Legacy Migration', 'ActiveX'],
-      },
-      {
-        period: '2022.01 ~ 2022.05',
-        company: '바바패션 (힙합퍼 백오피스)',
-        role: '프리랜서 (PL)',
-        description: 'MSA 환경 신규 설계 및 구축',
-        achievements: [
-          'MSA 환경 신규설계 & 구성',
-          'Oauth2.0, JWT 기반 인증/인가 시스템 개발',
-          'Gitlab CI/CD 환경 구성',
-          '테스트 & 빌드, OAS3, RESTDOC API 문서 자동화 구성',
-          '로그인, 운영자권한관리, 회원관리 API 개발',
-        ],
-        color: 'from-teal-400 to-cyan-500',
-        images: ['/public/images/projects/hiphoper_1.png'],
-        imageTitles: ['힙합퍼 메인 페이지'],
-        tech: ['MSA', 'GitLab CI/CD', 'OAS3', 'REST DOC'],
-      },
-      {
-        period: '2021.08 ~ 2021.12',
-        company: '하나투어',
+        period: '2023.08 ~ 2023.10',
+        company: '하이데브 (더블랙레이블)',
         role: '프리랜서',
-        description: '레거시 통합검색 엔진 리뉴얼',
+        description: '라이브 스트리밍 서비스 신규 구축',
         achievements: [
-          '기존 레거시 통합검색 엔진 (솔트룩스) 분석',
-          '신규 통합검색 엔진(Elasticsearch) 으로 리뉴얼 개발',
-          '검색 성능 최적화 및 사용자 경험 개선',
+          'AWS SQS, RDS, S3, SSM, SECRETS 연동 개발',
+          '라이브 스트리밍 서비스 신규 구축',
+          'Mp3 HLS지원 확장자 인코딩 컨슈머 개발',
+          'SendBird(영상 스트리밍 서비스) SDK 연동',
+          'Terraform, LocalStack 환경구성',
+          'S3 업/다운 스트리밍 비즈니스 개발',
         ],
-        color: 'from-violet-400 to-purple-500',
+        color: 'from-indigo-400 to-purple-500',
         images: [
-          '/public/images/projects/tour_1.png',
-          '/public/images/projects/tour_2.png',
-          '/public/images/projects/tour_3.png',
+          '/public/images/projects/theblack_1.png',
+          '/public/images/projects/theblack_2.png',
+          '/public/images/projects/theblack_3.png',
+          '/public/images/projects/theblack_4.png',
+          '/public/images/projects/theblack_5.png',
+          '/public/images/projects/theblack_6.png',
+          '/public/images/projects/theblack_7.png',
         ],
         imageTitles: [
-          '통합검색 시스템',
-          '검색 결과 페이지 1',
-          '검색 결과 페이지 2',
+          '메인',
+          '라이브 스트리밍',
+          '라이브 챗',
+          '라이브 보이스',
+          '포토카드 갤러리 1',
+          '포토카드 갤러리 2',
+          '라이브 스트리밍',
         ],
-        tech: ['Elasticsearch', 'Spring Boot', 'Search Optimization'],
+        tech: ['AWS SQS', 'SendBird SDK', 'HLS', 'Terraform'],
       },
       {
-        period: '2020.03 ~ 2021.05',
-        company: '스테이션3 (다방)',
-        role: '대리',
-        description: '부동산 플랫폼 백엔드 코어 개발',
+        period: '2023.10 ~ 2023.11',
+        company: '아카랩 (말로해장부)',
+        role: '프리랜서',
+        description: '운송사 장부관리 앱 신규 개발',
         achievements: [
-          '부동산 플랫폼 (다방) 백엔드 코어개발',
-          '대용량 데이터 처리 시스템 구축',
-          '부동산 매물 관리 API 개발',
-          '사용자 맞춤 추천 시스템 구현',
+          'Spring Boot 장부 관리 (등록, 수정, 조회, 삭제) API 개발',
+          'Flutter 장부 관리 모바일 화면 개발',
+          '월별 통계 달력 조회, 장부 상세 조회, 장부 기록 수정 기능 구현',
+          'AWS EC2, RDS 구성',
         ],
-        color: 'from-green-400 to-emerald-500',
+        color: 'from-cyan-400 to-blue-500',
         images: [
-          '/public/images/projects/dabang_2.png',
-          '/public/images/projects/dabang_1.png',
-          '/public/images/projects/dabang_3.png',
-          '/public/images/projects/dabang_4.png',
+          '/public/images/projects/malohae_1.png',
+          '/public/images/projects/malohae_2.png',
+          '/public/images/projects/malohae_3.png',
+          '/public/images/projects/malohae_4.png',
+          '/public/images/projects/malohae_5.png',
+        ],
+        imageTitles: ['장부 관리 앱', '통계 대시보드', '월별 달력 뷰'],
+        tech: ['Flutter', 'Spring Boot', 'AWS EC2', 'RDS'],
+      },
+      {
+        period: '2023.11 ~ 2024.01',
+        company: '러쉬코리아 (프레시 세일)',
+        role: '프리랜서',
+        description: '대용량 트래픽 대응 프레시 세일 전용 쇼핑몰 신규 구축',
+        achievements: [
+          '백엔드(Spring Boot 3.x), 프론트(React 18+, Next 13+) 병행 개발',
+          '주문 결제 프로세스 신규구축 (이니시스 PG 연동), 취소 환불',
+          '재고 Redis 연동(대용량 트래픽 대응)',
+          '상품 목록, 상세, 검색 및 장바구니 기능',
+          'JWT 로그인 (Recoil-Persist)',
+          'Jenkins CI/CD 환경 구성',
+        ],
+        color: 'from-orange-400 to-red-500',
+        images: [
+          '/public/images/projects/fresh_3.jpeg',
+          '/public/images/projects/fresh_2.jpeg',
+          '/public/images/projects/fresh_1.jpeg',
+        ],
+        imageTitles: ['메인', '상품 상세 페이지', '장바구니 & 결제'],
+        tech: ['Next.js 13', 'Spring Boot 3.x', 'Redis', 'Jenkins'],
+      },
+      {
+        period: '2022.12 ~ 2024.06',
+        company: '러쉬코리아 (유지보수)',
+        role: '프리랜서',
+        description: '커머스 자사몰 유지보수 및 신규 기능 개발',
+        achievements: [
+          '커머스 자사몰 사이트 유지보수',
+          '이니시스 결제 프로세스 리뉴얼',
+          '주문/결제 선물하기, 모바일 상품권 신규 개발',
+          '통합 메시지 서버 구축 (UMS)',
+          '애플 로그인 신규 개발 및 JWT 전환',
+          '러쉬쿠폰 QR 서비스, POS연동 개발',
+        ],
+        color: 'from-purple-400 to-pink-500',
+        images: [
+          '/public/images/projects/lush_1.png',
+          '/public/images/projects/lush_2.png',
+          '/public/images/projects/lush_3.png',
+          '/public/images/projects/lush_6.png',
+          '/public/images/projects/lush_4.png',
+          '/public/images/projects/lush_5.png',
         ],
         imageTitles: [
-          '매물 검색 1',
-          '매물 검색 2',
-          '매물 즐겨찾기 영역',
-          '매물 추천 및 통계',
+          '메인',
+          '제품 상세',
+          '쿠폰 상세',
+          '러쉬 페이',
+          'UMS 메인',
+          'UMS 발송',
         ],
-        tech: ['Spring Boot', 'React', 'Recommendation', 'Elasticsearch'],
+        tech: ['Spring Boot', 'JWT', 'POS연동', 'QR', 'UMS'],
       },
       {
-        period: '2018.01 ~ 2020.02',
-        company: '나온소프트',
-        role: '대리',
-        description: '그룹웨어 커스터마이징 및 포털 개발',
+        period: '2024.07 ~ 2024.08',
+        company: '달라컴퍼니 (중고명품 크리)',
+        role: '프리랜서',
+        description: '중고명품 거래 플랫폼 개발',
         achievements: [
-          '그룹웨어 커스터마이징 개발',
-          '전자결재 SAP 연동 시스템 구축',
-          '그룹웨어 포털 개발',
-          '업무 프로세스 자동화 구현',
+          '리뷰, 실시간 견적 리스트 화면 & API 개발.',
+          '앱 사진 앨범 불러오기 네이티브 개발.',
+          '앱(IOS & Android) 하이브리드 앱 개발 및 심사 & 스토어 출시.',
+          '앱 멀티웹뷰 방식 개발.',
+          'AWS S3 + cloud front(CDN) 파일 업로드 인프라 구축.',
         ],
-        color: 'from-blue-400 to-indigo-500',
+        color: 'from-emerald-400 to-green-500',
         images: [
-          '/public/images/projects/naon_1.png',
-          '/public/images/projects/naon_2.png',
-          '/public/images/projects/naon_3.png',
-          '/public/images/projects/naon_4.png',
-          '/public/images/projects/naon_5.png',
+          '/public/images/projects/criee_5.PNG',
+          '/public/images/projects/criee_1.PNG',
+          '/public/images/projects/criee_2.PNG',
+          '/public/images/projects/criee_3.PNG',
+          '/public/images/projects/criee_4.PNG',
         ],
         imageTitles: [
-          '포털 메인',
-          '스마트 워크',
-          '캘린더',
-          '근태 관리',
-          '전자 결재',
+          '웹 메인',
+          '앱스토어 화면',
+          '실시간 견적 시스템',
+          '물품 배송 시스템',
+          '실시간 리뷰',
         ],
-        tech: ['SAP 연동', 'Groupware', 'Portal', 'Workflow'],
+        tech: ['React Native', 'Spring Boot', 'AWS S3', 'CDN'],
       },
       {
-        period: '2014.02 ~ 2017.05',
-        company: '아카넷',
-        role: '주임연구원',
-        description: '교육 플랫폼 개발 및 학사 시스템 구축',
+        period: '2024.07 ~ 2024.10',
+        company: '아우토크립트 (이동의 자유)',
+        role: '프리랜서',
+        description: '노약자 및 장애인을 위한 주행 시스템 개발',
         achievements: [
-          'LMS (Learning Management System) 개발',
-          '학사시스템 포탈 솔루션 개발',
-          '교육 콘텐츠 관리 시스템 구축',
-          '학습자 진도 관리 및 평가 시스템 개발',
+          '주행 경유지 하차, 주행 롤백 개발',
+          '어드민 주행상세, 회차지 경로선택 관련 비즈니스 개발',
+          '어드민 통계/업무일지 비즈니스 개발',
+          '어드민 스케줄링 주행, 승객, 예약 데이터 수집 개발',
         ],
-        color: 'from-slate-400 to-gray-500',
-        images: [
-          '/public/images/projects/acanet_1.png',
-          '/public/images/projects/acanet_2.png',
-        ],
-        imageTitles: ['LMS 플랫폼', '학사관리 시스템'],
-        tech: ['LMS', 'Education Portal', 'Content Management', 'Java'],
+        color: 'from-blue-400 to-cyan-500',
+        images: ['/public/images/projects/auto_1.png'],
+        imageTitles: ['주행 관제 시스템'],
+        tech: ['Spring Boot', 'Kotlin', 'React', 'AWS', 'PostgreSQL'],
       },
     ],
     []
@@ -646,7 +646,64 @@ export const About: React.FC = () => {
           </div>
 
           <div className='relative mx-auto max-w-6xl'>
+            {/* 메인 타임라인 */}
             <div className='absolute left-8 h-full w-1 transform rounded-full bg-gradient-to-b from-blue-500 via-purple-500 to-cyan-500 md:left-1/2 md:-translate-x-1/2' />
+
+            {/* 년도 마커들 */}
+            {(() => {
+              const years = new Set();
+              experiences.forEach(exp => {
+                const startYear = exp.period.split('.')[0];
+                const endYear = exp.period.includes('~')
+                  ? exp.period.split('~ ')[1]?.split('.')[0]
+                  : startYear;
+                years.add(startYear);
+                if (endYear && endYear !== startYear) years.add(endYear);
+              });
+
+              // @ts-ignore
+              const sortedYears = Array.from(years).sort((a, b) => b - a);
+
+              // @ts-ignore
+              return sortedYears.map((year: string, index) => (
+                <div
+                  key={index}
+                  className='absolute left-8 flex items-center md:left-1/2 md:-translate-x-1/2'
+                  style={{
+                    top: `${(index * 100) / (sortedYears.length - 1)}%`,
+                    transform: 'translateY(-50%)',
+                  }}
+                >
+                  {/*/!* 년도 배경 원 *!/*/}
+                  {/*<div className='relative z-20 flex h-16 w-16 items-center justify-center rounded-full border-4 border-white/30 bg-gradient-to-br from-blue-600 via-purple-600 to-cyan-600 shadow-2xl backdrop-blur-xl'>*/}
+                  {/*  <span className='text-sm font-bold text-white drop-shadow-lg'>*/}
+                  {/*    {year ?? ''}*/}
+                  {/*  </span>*/}
+                  {/*</div>*/}
+
+                  {/*/!* 년도 레이블 (데스크톱) *!/*/}
+                  {/*<div className='absolute hidden md:flex'>*/}
+                  {/*  <div className='absolute -left-24 flex h-8 items-center justify-center rounded-lg bg-gradient-to-r from-blue-600/80 to-purple-600/80 px-3 backdrop-blur-sm'>*/}
+                  {/*    <span className='text-xs font-semibold text-white'>*/}
+                  {/*      {year ?? ''}*/}
+                  {/*    </span>*/}
+                  {/*  </div>*/}
+                  {/*  <div className='absolute left-8 flex h-8 items-center justify-center rounded-lg bg-gradient-to-r from-purple-600/80 to-cyan-600/80 px-3 backdrop-blur-sm'>*/}
+                  {/*    <span className='text-xs font-semibold text-white'>*/}
+                  {/*      {year ?? ''}*/}
+                  {/*    </span>*/}
+                  {/*  </div>*/}
+                  {/*</div>*/}
+
+                  {/*/!* 모바일 년도 레이블 *!/*/}
+                  {/*<div className='absolute -right-20 flex h-8 items-center justify-center rounded-lg bg-gradient-to-r from-blue-600/90 to-purple-600/90 px-3 backdrop-blur-sm md:hidden'>*/}
+                  {/*  <span className='text-xs font-semibold text-white'>*/}
+                  {/*    {year ?? ''}*/}
+                  {/*  </span>*/}
+                  {/*</div>*/}
+                </div>
+              ));
+            })()}
 
             <div className='space-y-8'>
               {experiences.map((exp, index) => (
@@ -656,7 +713,30 @@ export const About: React.FC = () => {
                   delay={50}
                   className={`relative flex flex-col items-center md:flex-row ${index % 2 === 0 ? '' : 'md:flex-row-reverse'}`}
                 >
-                  <div className='absolute left-6 z-10 h-4 w-4 transform rounded-full border-2 border-white bg-gradient-to-r from-blue-500 to-purple-500 md:left-1/2 md:-translate-x-1/2' />
+                  {/* 프로젝트 도트 */}
+                  <div className='absolute left-6 z-30 h-6 w-6 transform rounded-full border-4 border-white bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg md:left-1/2 md:-translate-x-1/2'>
+                    <div className='absolute inset-1 rounded-full bg-white'></div>
+                  </div>
+
+                  {/* 프로젝트 년도 표시 - 이전 년도와 다를 때만 표시 */}
+                  {(() => {
+                    const currentYear = exp.period.split('.')[0];
+                    const prevYear = index > 0 ? experiences[index - 1].period.split('.')[0] : '';
+                    
+                    // 이전 년도와 다를 때만 표시
+                    if (currentYear !== prevYear) {
+                      return (
+                        <div className='z-25 absolute left-8 top-0 md:left-1/2 md:-translate-x-1/2'>
+                          <div className='rounded-md bg-gradient-to-r from-gray-800/90 to-gray-700/90 px-2 py-1 backdrop-blur-sm'>
+                            <span className='text-xs font-medium text-gray-200'>
+                              {currentYear}
+                            </span>
+                          </div>
+                        </div>
+                      );
+                    }
+                    return null;
+                  })()}
 
                   {/* 경력 정보 카드 */}
                   <div

@@ -1771,53 +1771,6 @@ export const ServicesSection: React.FC = () => {
             </div>
           ))}
         </div>
-
-        {/* 추가 정보 */}
-        <div className='mt-16 text-center'>
-          <div className='mx-auto max-w-4xl rounded-xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl'>
-            <h3 className='mb-6 text-2xl font-bold text-white'>
-              왜{' '}
-              <span className='bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent'>
-                이런 퀄리티
-              </span>
-              가 가능한가?
-            </h3>
-
-            <div className='mb-8 grid grid-cols-1 gap-6 md:grid-cols-3'>
-              <div className='text-center'>
-                <div className='mb-3 text-3xl'>🎨</div>
-                <h4 className='mb-2 font-semibold text-white'>모던 UI/UX</h4>
-                <p className='text-sm text-gray-400'>최신 디자인 트렌드 적용</p>
-              </div>
-              <div className='text-center'>
-                <div className='mb-3 text-3xl'>⚡</div>
-                <h4 className='mb-2 font-semibold text-white'>성능 최적화</h4>
-                <p className='text-sm text-gray-400'>빠른 로딩과 부드러운 UX</p>
-              </div>
-              <div className='text-center'>
-                <div className='mb-3 text-3xl'>📱</div>
-                <h4 className='mb-2 font-semibold text-white'>반응형 디자인</h4>
-                <p className='text-sm text-gray-400'>모든 디바이스 완벽 대응</p>
-              </div>
-            </div>
-
-            <div className='rounded-lg border border-blue-500/30 bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-6'>
-              <p className='mb-2 text-lg font-semibold text-white'>
-                🚀 Enterprise급 UI/UX 개발
-              </p>
-              <p className='leading-relaxed text-gray-300'>
-                <span className='font-semibold text-blue-400'>10년+ 경험</span>
-                을 바탕으로 한 모던한 디자인 시스템과
-                <span className='font-semibold text-emerald-400'>
-                  {' '}
-                  Next.js, React, TypeScript
-                </span>{' '}
-                등 최신 기술 스택으로 사용자 경험을 극대화한 인터페이스를
-                제작합니다.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* 데모 모달 */}
