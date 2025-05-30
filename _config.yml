@@ -1,12 +1,33 @@
 # Site settings
-title: "개발자 포트폴리오"
-description: "Jekyll + React + TypeScript + Tailwind CSS로 제작된 현대적인 포트폴리오 웹사이트"
+title: "이정수 - 시니어 풀스택 개발자 포트폴리오"
+description: "2014년부터 10년 이상의 실무 경험을 가진 시니어 풀스택 개발자 이정수의 포트폴리오. Spring Boot, Java, React, AWS 전문. 교육, 부동산, 커머스, 핀테크, 모빌리티 등 다양한 도메인에서 30여 개 프로젝트 완료."
 url: "https://dlwjdtn535.github.io"
 baseurl: ""
+
+# Author information
+author:
+  name: "이정수 (J.S LEE)"
+  email: "dlwjdtn535@gmail.com"
+  bio: "10년 이상의 실무 경험을 가진 시니어 풀스택 개발자"
+  github: "dlwjdtn535"
+  linkedin: "jslee-dev"
+
+# SEO settings
+lang: ko_KR
+locale: ko_KR
+timezone: Asia/Seoul
+
+# Social media
+social:
+  name: "이정수"
+  links:
+    - "https://github.com/dlwjdtn535"
+    - "https://linkedin.com/in/jslee-dev"
 
 # Build settings
 markdown: kramdown
 permalink: pretty
+highlighter: rouge
 
 # Plugins
 plugins:
@@ -14,6 +35,23 @@ plugins:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
+  - jekyll-seo-tag
+
+# Sitemap settings
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+      sitemap: true
+
+# Feed settings
+feed:
+  excerpt_only: true
+
+# Pagination
+paginate: 10
+paginate_path: "/page:num/"
 
 # Exclude from processing
 exclude:
@@ -34,7 +72,21 @@ exclude:
   - tailwind.config.js
   - postcss.config.js
   - index-dev.html
+  - .git/
+  - .github/
+  - vendor/
 
-# Include files that start with underscore
+# Include files that start with underscore and important files
 include:
   - _layouts
+  - .htaccess
+  - robots.txt
+
+# SEO tag settings
+tag_page_layout: tag_page
+tag_page_dir: tag
+
+# Additional settings
+future: false
+show_drafts: false
+unpublished: false
