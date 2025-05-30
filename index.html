@@ -1,28 +1,22 @@
----
-layout: default
-title: "이정수 - 시니어 풀스택 개발자 포트폴리오"
-description: "2014년부터 10년 이상의 실무 경험을 가진 시니어 풀스택 개발자 이정수의 포트폴리오. Spring Boot, Java, React, AWS 전문. 교육, 부동산, 커머스, 핀테크, 모빌리티 등 다양한 도메인에서 30여 개 프로젝트 완료."
----
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>이정수 - 시니어 풀스택 개발자 포트폴리오</title>
+  <title>J.S 시니어 풀스택 개발자 포트폴리오</title>
   <meta name="description" content="2014년부터 10년 이상의 실무 경험을 가진 시니어 풀스택 개발자 이정수의 포트폴리오. Spring Boot, Java, React, AWS 전문. 교육, 부동산, 커머스, 핀테크, 모빌리티 등 다양한 도메인에서 30여 개 프로젝트 완료.">
   <meta name="keywords" content="시니어 개발자 채용, 풀스택 개발자 고용, Spring Boot 전문가, React 개발자 외주, AWS 컨설팅, 웹 개발 외주, 시스템 구축, API 개발, 데이터베이스 설계, 모바일 앱 개발, 스타트업 개발자, 기업 SI, 프리랜서 개발자, 개발 프로젝트 아웃소싱, 백엔드 개발 외주, 프론트엔드 개발 용역, 시니어 프로그래머, 10년 경력 개발자, Java Spring 개발, TypeScript React 개발, 클라우드 마이그레이션, DevOps 구축, 핀테크 개발, 커머스 개발, 교육 플랫폼 개발, 이정수, J.S LEE">
-  <meta name="author" content="이정수">
+  <meta name="author" content="J.S">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="이정수 - 시니어 풀스택 개발자 포트폴리오">
+  <meta property="og:title" content="J.S - 시니어 풀스택 개발자 포트폴리오">
   <meta property="og:description" content="10년 이상의 실무 경험과 30여 개 프로젝트 완료. Spring Boot, React, AWS 전문 시니어 개발자">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dlwjdtn535.github.io">
   <meta property="og:image" content="https://dlwjdtn535.github.io/images/projects/profile.jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="이정수 시니어 풀스택 개발자 포트폴리오">
+  <meta property="og:image:alt" content="J.S 시니어 풀스택 개발자 포트폴리오">
   <meta property="og:site_name" content="J.S LEE Portfolio">
   <meta property="og:locale" content="ko_KR">
 
@@ -30,7 +24,7 @@ description: "2014년부터 10년 이상의 실무 경험을 가진 시니어 �
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@jslee_dev">
   <meta name="twitter:creator" content="@jslee_dev">
-  <meta name="twitter:title" content="이정수 - 시니어 풀스택 개발자 포트폴리오">
+  <meta name="twitter:title" content="J.S - 시니어 풀스택 개발자 포트폴리오">
   <meta name="twitter:description" content="10년 이상의 실무 경험과 30여 개 프로젝트 완료. Spring Boot, React, AWS 전문 시니어 개발자">
   <meta name="twitter:image" content="https://dlwjdtn535.github.io/images/projects/profile.jpeg">
 
@@ -42,12 +36,74 @@ description: "2014년부터 10년 이상의 실무 경험을 가진 시니어 �
   <meta name="theme-color" content="#3b82f6">
   <meta name="msapplication-TileColor" content="#3b82f6">
 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+
+  <!-- Tailwind CSS CDN (development와 동일) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Config (development와 동일) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sans': ['Noto Sans KR', 'sans-serif'],
+          },
+          animation: {
+            'fadeInUp': 'fadeInUp 0.8s ease-out forwards',
+            'fadeInLeft': 'fadeInLeft 0.8s ease-out forwards',
+            'fadeInRight': 'fadeInRight 0.8s ease-out forwards',
+            'scaleIn': 'scaleIn 0.6s ease-out forwards',
+            'slideInUp': 'slideInUp 0.6s ease-out forwards',
+            'bounce-slow': 'bounce 2s infinite',
+            'spin-slow': 'spin 3s linear infinite',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            },
+            fadeInLeft: {
+              '0%': { opacity: '0', transform: 'translateX(-30px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' }
+            },
+            fadeInRight: {
+              '0%': { opacity: '0', transform: 'translateX(30px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' }
+            },
+            scaleIn: {
+              '0%': { opacity: '0', transform: 'scale(0.9)' },
+              '100%': { opacity: '1', transform: 'scale(1)' }
+            },
+            slideInUp: {
+              '0%': { opacity: '0', transform: 'translateY(100%)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            }
+          },
+          colors: {
+            primary: {
+              50: '#eff6ff',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+            }
+          }
+        }
+      }
+    }
+  </script>
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "이정수",
+    "name": "J.S",
     "alternateName": "J.S LEE",
     "description": "10년 이상의 실무 경험을 가진 시니어 풀스택 개발자",
     "url": "https://dlwjdtn535.github.io",
@@ -141,11 +197,11 @@ description: "2014년부터 10년 이상의 실무 경험을 가진 시니어 �
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "J.S LEE Portfolio",
-    "description": "이정수 시니어 풀스택 개발자 포트폴리오 웹사이트",
+    "description": "J.S 시니어 풀스택 개발자 포트폴리오 웹사이트",
     "url": "https://dlwjdtn535.github.io",
     "author": {
       "@type": "Person",
-      "name": "이정수"
+      "name": "J.S"
     },
     "potentialAction": {
       "@type": "SearchAction",
@@ -161,7 +217,7 @@ description: "2014년부터 10년 이상의 실무 경험을 가진 시니어 �
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "J.S LEE Development Services",
-    "description": "시니어 풀스택 개발자 이정수의 전문 개발 서비스",
+    "description": "시니어 풀스택 개발자 J.S의 전문 개발 서비스",
     "url": "https://dlwjdtn535.github.io",
     "telephone": "+82-10-XXXX-XXXX",
     "email": "dlwjdtn5624@naver.com",
@@ -178,7 +234,7 @@ description: "2014년부터 10년 이상의 실무 경험을 가진 시니어 �
     "serviceType": "Software Development",
     "provider": {
       "@type": "Person",
-      "name": "이정수",
+      "name": "J.S",
       "jobTitle": "Senior Full-Stack Developer"
     },
     "areaServed": {
@@ -226,7 +282,7 @@ description: "2014년부터 10년 이상의 실무 경험을 가진 시니어 �
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "시니어 풀스택 개발자 이정수는 어떤 프로젝트를 담당할 수 있나요?",
+        "name": "시니어 풀스택 개발자 J.S는 어떤 프로젝트를 담당할 수 있나요?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "웹 애플리케이션 개발, API 설계 및 구축, 클라우드 인프라 구축, 데이터베이스 설계, 모바일 앱 백엔드, 시스템 아키텍처 설계 등 풀스택 개발의 모든 영역을 담당할 수 있습니다. 특히 Spring Boot, React, AWS를 활용한 확장 가능한 시스템 구축에 전문성을 가지고 있습니다."
@@ -274,7 +330,7 @@ description: "2014년부터 10년 이상의 실무 경험을 가진 시니어 �
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "J.S LEE Development Services",
-    "description": "시니어 풀스택 개발자 이정수의 전문 개발 서비스 - 10년 경력의 Spring Boot, React, AWS 전문가",
+    "description": "시니어 풀스택 개발자 J.S의 전문 개발 서비스 - 10년 경력의 Spring Boot, React, AWS 전문가",
     "url": "https://dlwjdtn535.github.io",
     "telephone": "+82-10-XXXX-XXXX",
     "email": "dlwjdtn5624@naver.com",
@@ -295,12 +351,12 @@ description: "2014년부터 10년 이상의 실무 경험을 가진 시니어 �
     "paymentAccepted": "Bank Transfer, Cash",
     "founder": {
       "@type": "Person",
-      "name": "이정수",
+      "name": "J.S",
       "jobTitle": "Senior Full-Stack Developer"
     },
     "employee": {
       "@type": "Person",
-      "name": "이정수",
+      "name": "J.S",
       "jobTitle": "Senior Full-Stack Developer"
     },
     "serviceArea": {
@@ -336,8 +392,7 @@ description: "2014년부터 10년 이상의 실무 경험을 가진 시니어 �
     }
   }
   </script>
-</head>
-<body>
+
   <!-- Google Analytics (필요한 경우) -->
   <!--
   <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
@@ -361,13 +416,17 @@ description: "2014년부터 10년 이상의 실무 경험을 가진 시니어 �
   <!-- Alternative: Google Tag Manager (recommended) -->
   <!-- Replace GTM-XXXXXXX with your actual GTM ID -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-W6Q9KT6W');</script>
+</head>
+<body id="page-top" class="index">
+<!--Noscript fallback for GTM -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6Q9KT6W"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <!--Noscript fallback for GTM -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6Q9KT6W"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <div id="react-app"></div>
+  <script src="/js/react-build/app.bundle.js"></script>
 </body>
 </html>
