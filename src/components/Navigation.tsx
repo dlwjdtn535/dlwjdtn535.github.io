@@ -35,29 +35,33 @@ const Navigation: React.FC = () => {
       <div className='container mx-auto px-4'>
         <div className='flex items-center justify-between py-4'>
           {/* Brand */}
-          <div className="flex items-center">
+          <div className='flex items-center'>
             <button
               onClick={() => handleSmoothScroll('page-top')}
               className={`group relative overflow-hidden rounded-lg px-3 py-2 text-xl font-black transition-all duration-300 ${
-                isScrolled 
-                  ? 'text-gray-800 hover:bg-gray-100' 
+                isScrolled
+                  ? 'text-gray-800 hover:bg-gray-100'
                   : 'text-white hover:bg-white/10'
               }`}
             >
-              <span className={`relative z-10 bg-gradient-to-r ${
-                isScrolled 
-                  ? 'from-blue-600 via-purple-600 to-cyan-600' 
-                  : 'from-blue-400 via-purple-400 to-cyan-400'
-              } bg-clip-text text-transparent transition-all duration-300 group-hover:scale-110`}>
-                J.S
+              <span
+                className={`relative z-10 bg-gradient-to-r ${
+                  isScrolled
+                    ? 'from-blue-600 via-purple-600 to-cyan-600'
+                    : 'from-blue-400 via-purple-400 to-cyan-400'
+                } bg-clip-text text-transparent transition-all duration-300 group-hover:scale-110`}
+              >
+                JS
               </span>
-              
+
               {/* 호버 시 글로우 효과 */}
-              <div className={`absolute inset-0 rounded-lg bg-gradient-to-r ${
-                isScrolled 
-                  ? 'from-blue-500/10 via-purple-500/10 to-cyan-500/10' 
-                  : 'from-blue-400/20 via-purple-400/20 to-cyan-400/20'
-              } opacity-0 transition-opacity duration-300 group-hover:opacity-100`} />
+              <div
+                className={`absolute inset-0 rounded-lg bg-gradient-to-r ${
+                  isScrolled
+                    ? 'from-blue-500/10 via-purple-500/10 to-cyan-500/10'
+                    : 'from-blue-400/20 via-purple-400/20 to-cyan-400/20'
+                } opacity-0 transition-opacity duration-300 group-hover:opacity-100`}
+              />
             </button>
           </div>
 

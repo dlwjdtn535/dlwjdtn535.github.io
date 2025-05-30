@@ -1,15 +1,60 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 
 import { AnimatedSection } from './AnimatedSection';
 
 export const About: React.FC = () => {
   // 이미지 갤러리 모달 상태
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+  const [isGalleryVisible, setIsGalleryVisible] = useState(false);
+  const [isGalleryAnimating, setIsGalleryAnimating] = useState(false);
   const [currentGallery, setCurrentGallery] = useState<{
     images: string[];
     titles: string[];
   }>({ images: [], titles: [] });
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // 갤러리 열기
+  const openGallery = useCallback(
+    (images: string[], titles: string[], startIndex: number = 0) => {
+      setCurrentGallery({ images, titles });
+      setCurrentImageIndex(startIndex);
+      setIsGalleryOpen(true);
+      document.body.style.overflow = 'hidden'; // 스크롤 방지
+
+      // 애니메이션을 위한 순차적 실행
+      setTimeout(() => {
+        setIsGalleryVisible(true);
+        setIsGalleryAnimating(true);
+      }, 10);
+    },
+    []
+  );
+
+  // 갤러리 닫기
+  const closeGallery = useCallback(() => {
+    setIsGalleryAnimating(false);
+    setIsGalleryVisible(false);
+
+    // 애니메이션이 끝난 후 모달 완전히 닫기
+    setTimeout(() => {
+      setIsGalleryOpen(false);
+      document.body.style.overflow = 'unset'; // 스크롤 복원
+    }, 300);
+  }, []);
+
+  // 이전 이미지
+  const prevImage = useCallback(() => {
+    setCurrentImageIndex(prev =>
+      prev === 0 ? currentGallery.images.length - 1 : prev - 1
+    );
+  }, [currentGallery.images.length]);
+
+  // 다음 이미지
+  const nextImage = useCallback(() => {
+    setCurrentImageIndex(prev =>
+      prev === currentGallery.images.length - 1 ? 0 : prev + 1
+    );
+  }, [currentGallery.images.length]);
 
   // 키보드 이벤트 처리
   useEffect(() => {
@@ -31,39 +76,7 @@ export const About: React.FC = () => {
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [isGalleryOpen, currentImageIndex, currentGallery.images.length]);
-
-  // 갤러리 열기
-  const openGallery = (
-    images: string[],
-    titles: string[],
-    startIndex: number = 0
-  ) => {
-    setCurrentGallery({ images, titles });
-    setCurrentImageIndex(startIndex);
-    setIsGalleryOpen(true);
-    document.body.style.overflow = 'hidden'; // 스크롤 방지
-  };
-
-  // 갤러리 닫기
-  const closeGallery = () => {
-    setIsGalleryOpen(false);
-    document.body.style.overflow = 'unset'; // 스크롤 복원
-  };
-
-  // 이전 이미지
-  const prevImage = () => {
-    setCurrentImageIndex(prev =>
-      prev === 0 ? currentGallery.images.length - 1 : prev - 1
-    );
-  };
-
-  // 다음 이미지
-  const nextImage = () => {
-    setCurrentImageIndex(prev =>
-      prev === currentGallery.images.length - 1 ? 0 : prev + 1
-    );
-  };
+  }, [isGalleryOpen, closeGallery, prevImage, nextImage]);
 
   // 메모리 최적화: 정적 데이터를 useMemo로 메모이제이션
   const skills = useMemo(
@@ -250,11 +263,11 @@ export const About: React.FC = () => {
         role: '프리랜서',
         description: '중고명품 거래 플랫폼 개발',
         achievements: [
-          '견적 등록, 수정, 삭제 화면 & API 개발',
-          '견적 입찰, 메인 비지니스 화면 & API 개발',
-          '리뷰, 실시간 견적 리스트 화면 & API 개발',
-          '앱(iOS & Android) 하이브리드 앱 개발 및 스토어 출시',
-          'AWS S3 + CloudFront(CDN) 파일 업로드 인프라 구축',
+          '리뷰, 실시간 견적 리스트 화면 & API 개발.',
+          '앱 사진 앨범 불러오기 네이티브 개발.',
+          '앱(IOS & Android) 하이브리드 앱 개발 및 심사 & 스토어 출시.',
+          '앱 멀티웹뷰 방식 개발.',
+          'AWS S3 + cloud front(CDN) 파일 업로드 인프라 구축.',
         ],
         color: 'from-emerald-400 to-green-500',
         images: [
@@ -741,7 +754,7 @@ export const About: React.FC = () => {
                                 strokeLinecap='round'
                                 strokeLinejoin='round'
                                 strokeWidth={2}
-                                d='M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z'
+                                d='M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'
                               />
                             </svg>
                             {exp.images.length}
@@ -804,55 +817,99 @@ export const About: React.FC = () => {
           </div>
         </div>
 
-        {/* 간소화된 기술 스택 */}
+        {/* 혁신적인 기술 스택 섹션 */}
         <AnimatedSection animation='fadeInUp' delay={200} className='mb-16'>
           <div className='mb-12 text-center'>
             <h3 className='mb-4 text-3xl font-bold text-white md:text-4xl'>
               Tech{' '}
               <span className='bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>
-                Stack
+                Arsenal
               </span>
             </h3>
             <div className='mx-auto h-1 w-20 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500' />
+            <p className='mx-auto mt-4 max-w-2xl text-gray-300'>
+              10년간 축적된 기술 스택과 전문성을 시각적으로 확인해보세요
+            </p>
           </div>
 
-          <div className='mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
-            {skills.map(skillGroup => (
-              <AnimatedSection
-                key={skillGroup.category}
-                animation='fadeInUp'
-                delay={100}
-                className='group'
-              >
-                <div className='h-full transform rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:border-white/30'>
-                  <h4 className='mb-6 text-center text-lg font-bold text-white'>
-                    {skillGroup.category}
-                  </h4>
+          {/* 기술 스택 인터랙티브 그리드 */}
+          <div className='relative mx-auto max-w-7xl'>
+            {/* 배경 파티클 효과 */}
+            <div className='absolute inset-0 overflow-hidden'>
+              <div className='tech-particles'>
+                {[...Array(8)].map((_, i) => (
+                  <div
+                    key={i}
+                    className='tech-particle'
+                    style={{
+                      left: `${Math.random() * 100}%`,
+                      animationDelay: `${Math.random() * 5}s`,
+                      animationDuration: `${4 + Math.random() * 2}s`,
+                    }}
+                  />
+                ))}
+              </div>
+            </div>
 
-                  <div className='space-y-4'>
-                    {skillGroup.technologies.map(tech => (
-                      <div key={tech.name} className='relative'>
-                        <div className='mb-2 flex items-center justify-between'>
-                          <span className='text-sm font-medium text-gray-200'>
-                            {tech.name}
-                          </span>
-                          <span className='rounded-full bg-white/10 px-2 py-1 text-xs text-gray-400'>
-                            {tech.level}%
-                          </span>
-                        </div>
-
-                        <div className='relative h-2 overflow-hidden rounded-full bg-white/10'>
-                          <div
-                            className={`h-full bg-gradient-to-r ${tech.color} rounded-full transition-all duration-1000 ease-out`}
-                            style={{ width: `${tech.level}%` }}
-                          />
+            <div className='relative z-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3'>
+              {skills.map((skillGroup, groupIndex) => (
+                <AnimatedSection
+                  key={skillGroup.category}
+                  animation='fadeInUp'
+                  delay={100 + groupIndex * 100}
+                  className='group relative'
+                >
+                  <div className='tech-stack-card group relative h-full transform overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-6 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:border-white/30 hover:shadow-xl hover:shadow-blue-500/10'>
+                    {/* 카테고리 헤더 */}
+                    <div className='relative z-10 mb-6 text-center'>
+                      <div className='mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 backdrop-blur-sm transition-all duration-300 group-hover:scale-105'>
+                        <div className='text-xl'>
+                          {groupIndex === 0 && '⚡'}
+                          {groupIndex === 1 && '🛠️'}
+                          {groupIndex === 2 && '🗄️'}
+                          {groupIndex === 3 && '☁️'}
+                          {groupIndex === 4 && '🔧'}
+                          {groupIndex === 5 && '✨'}
                         </div>
                       </div>
-                    ))}
+                      <h4 className='text-lg font-bold text-white transition-colors duration-300 group-hover:text-cyan-300'>
+                        {skillGroup.category}
+                      </h4>
+                    </div>
+
+                    {/* 기술 리스트 */}
+                    <div className='relative z-10 space-y-3'>
+                      {skillGroup.technologies.map(tech => (
+                        <div
+                          key={tech.name}
+                          className='tech-item group/item cursor-pointer transition-all duration-200 hover:scale-[1.02]'
+                        >
+                          <div className='mb-2 flex items-center justify-between'>
+                            <div className='flex items-center gap-3'>
+                              <div className='h-1.5 w-1.5 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-200 group-hover/item:scale-125' />
+                              <span className='text-sm font-medium text-gray-200 transition-colors duration-200 group-hover/item:text-white'>
+                                {tech.name}
+                              </span>
+                            </div>
+                            <span className='rounded-full bg-white/10 px-2 py-1 text-xs text-gray-400 transition-all duration-200 group-hover/item:bg-white/20 group-hover/item:text-white'>
+                              {tech.level}%
+                            </span>
+                          </div>
+
+                          {/* 간소화된 프로그레스 바 */}
+                          <div className='relative h-1.5 overflow-hidden rounded-full bg-white/10'>
+                            <div
+                              className={`h-full bg-gradient-to-r ${tech.color} rounded-full transition-all duration-700 ease-out`}
+                              style={{ width: `${tech.level}%` }}
+                            />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              </AnimatedSection>
-            ))}
+                </AnimatedSection>
+              ))}
+            </div>
           </div>
         </AnimatedSection>
 
@@ -998,17 +1055,30 @@ export const About: React.FC = () => {
       {/* 이미지 갤러리 모달 */}
       {isGalleryOpen && (
         <div
-          className='fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm'
+          className={`fixed inset-0 z-50 flex items-center justify-center p-4 transition-all duration-300 ease-out ${
+            isGalleryVisible
+              ? 'bg-black/90 backdrop-blur-sm'
+              : 'bg-black/0 backdrop-blur-none'
+          }`}
           onClick={closeGallery}
         >
           <div
-            className='relative mx-auto w-full max-w-5xl'
+            className={`relative mx-auto w-full max-w-5xl transform transition-all duration-500 ease-out ${
+              isGalleryAnimating
+                ? 'translate-y-0 scale-100 opacity-100'
+                : 'translate-y-8 scale-75 opacity-0'
+            }`}
             onClick={e => e.stopPropagation()}
           >
             {/* 닫기 버튼 */}
             <button
               onClick={closeGallery}
-              className='absolute right-4 top-4 z-10 rounded-full bg-black/50 p-2 text-white transition-colors duration-300 hover:bg-black/70'
+              className={`absolute right-4 top-4 z-10 rounded-full bg-black/50 p-2 text-white transition-all duration-300 hover:scale-110 hover:bg-black/70 ${
+                isGalleryAnimating
+                  ? 'translate-x-0 opacity-100'
+                  : 'translate-x-4 opacity-0'
+              }`}
+              style={{ transitionDelay: isGalleryAnimating ? '200ms' : '0ms' }}
             >
               <svg
                 className='h-6 w-6'
@@ -1028,7 +1098,12 @@ export const About: React.FC = () => {
             {/* 이전 버튼 */}
             <button
               onClick={prevImage}
-              className='absolute left-4 top-1/2 z-10 -translate-y-1/2 transform rounded-full bg-black/50 p-3 text-white transition-colors duration-300 hover:bg-black/70'
+              className={`absolute left-4 top-1/2 z-10 -translate-y-1/2 transform rounded-full bg-black/50 p-3 text-white transition-all duration-300 hover:scale-110 hover:bg-black/70 ${
+                isGalleryAnimating
+                  ? 'translate-x-0 opacity-100'
+                  : '-translate-x-4 opacity-0'
+              }`}
+              style={{ transitionDelay: isGalleryAnimating ? '300ms' : '0ms' }}
             >
               <svg
                 className='h-6 w-6'
@@ -1048,7 +1123,12 @@ export const About: React.FC = () => {
             {/* 다음 버튼 */}
             <button
               onClick={nextImage}
-              className='absolute right-4 top-1/2 z-10 -translate-y-1/2 transform rounded-full bg-black/50 p-3 text-white transition-colors duration-300 hover:bg-black/70'
+              className={`absolute right-4 top-1/2 z-10 -translate-y-1/2 transform rounded-full bg-black/50 p-3 text-white transition-all duration-300 hover:scale-110 hover:bg-black/70 ${
+                isGalleryAnimating
+                  ? 'translate-x-0 opacity-100'
+                  : 'translate-x-4 opacity-0'
+              }`}
+              style={{ transitionDelay: isGalleryAnimating ? '300ms' : '0ms' }}
             >
               <svg
                 className='h-6 w-6'
@@ -1066,16 +1146,33 @@ export const About: React.FC = () => {
             </button>
 
             {/* 메인 이미지 */}
-            <div className='rounded-xl border border-white/20 bg-white/10 p-6 backdrop-blur-xl'>
+            <div
+              className={`rounded-xl border border-white/20 bg-white/10 p-6 backdrop-blur-xl transition-all duration-500 ease-out ${
+                isGalleryAnimating
+                  ? 'scale-100 opacity-100'
+                  : 'scale-95 opacity-0'
+              }`}
+              style={{ transitionDelay: isGalleryAnimating ? '100ms' : '0ms' }}
+            >
               <div className='relative'>
                 <img
                   src={currentGallery.images[currentImageIndex]}
                   alt={currentGallery.titles[currentImageIndex]}
-                  className='h-auto max-h-[70vh] w-full rounded-lg object-contain'
+                  className='h-auto max-h-[70vh] w-full rounded-lg object-contain transition-all duration-500 ease-out'
+                  key={currentImageIndex} // 이미지 변경 시 애니메이션
                 />
 
                 {/* 이미지 정보 */}
-                <div className='absolute bottom-0 left-0 right-0 rounded-b-lg bg-gradient-to-t from-black/70 to-transparent p-4'>
+                <div
+                  className={`absolute bottom-0 left-0 right-0 rounded-b-lg bg-gradient-to-t from-black/70 to-transparent p-4 transition-all duration-500 ease-out ${
+                    isGalleryAnimating
+                      ? 'translate-y-0 opacity-100'
+                      : 'translate-y-4 opacity-0'
+                  }`}
+                  style={{
+                    transitionDelay: isGalleryAnimating ? '400ms' : '0ms',
+                  }}
+                >
                   <h3 className='mb-1 text-lg font-semibold text-white'>
                     {currentGallery.titles[currentImageIndex]}
                   </h3>
@@ -1086,14 +1183,23 @@ export const About: React.FC = () => {
               </div>
 
               {/* 썸네일 네비게이션 */}
-              <div className='mt-4 flex justify-center gap-2 overflow-x-auto'>
+              <div
+                className={`mt-4 flex justify-center gap-2 overflow-x-auto transition-all duration-500 ease-out ${
+                  isGalleryAnimating
+                    ? 'translate-y-0 opacity-100'
+                    : 'translate-y-4 opacity-0'
+                }`}
+                style={{
+                  transitionDelay: isGalleryAnimating ? '500ms' : '0ms',
+                }}
+              >
                 {currentGallery.images.map((image, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentImageIndex(index)}
-                    className={`h-12 w-16 flex-shrink-0 overflow-hidden rounded border-2 transition-all duration-300 ${
+                    className={`h-12 w-16 flex-shrink-0 overflow-hidden rounded border-2 transition-all duration-300 hover:scale-110 ${
                       index === currentImageIndex
-                        ? 'border-blue-400 opacity-100'
+                        ? 'scale-105 border-blue-400 opacity-100'
                         : 'border-white/30 opacity-60 hover:opacity-80'
                     }`}
                   >
@@ -1109,6 +1215,179 @@ export const About: React.FC = () => {
           </div>
         </div>
       )}
+
+      {/* 커스텀 CSS 스타일 */}
+      <style>{`
+        /* 최적화된 Tech Stack 스타일 */
+        .tech-particles {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+        }
+
+        .tech-particle {
+          position: absolute;
+          width: 3px;
+          height: 3px;
+          background: linear-gradient(45deg, #06b6d4, #3b82f6);
+          border-radius: 50%;
+          animation: simpleFloat 5s infinite ease-in-out;
+          opacity: 0.4;
+          will-change: transform;
+        }
+
+        @keyframes simpleFloat {
+          0%, 100% {
+            transform: translateY(0px) scale(1);
+            opacity: 0.2;
+          }
+          50% {
+            transform: translateY(-30px) scale(1.1);
+            opacity: 0.6;
+          }
+        }
+
+        /* 간소화된 카드 효과 */
+        .tech-stack-card {
+          will-change: transform;
+        }
+
+        /* 기술 아이템 애니메이션 */
+        .tech-item {
+          opacity: 0;
+          animation: fadeInUp 0.5s ease-out forwards;
+          will-change: transform;
+        }
+
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        /* 간소화된 허브 */
+        .tech-hub {
+          animation: slowRotate 30s linear infinite;
+          will-change: transform;
+        }
+
+        @keyframes slowRotate {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+
+        /* 반응형 최적화 */
+        @media (max-width: 768px) {
+          .tech-particle {
+            width: 2px;
+            height: 2px;
+            animation-duration: 4s;
+          }
+          
+          .tech-hub {
+            display: none !important;
+          }
+
+          .tech-stack-card {
+            will-change: auto;
+          }
+        }
+
+        /* 모션 감소 옵션 지원 */
+        @media (prefers-reduced-motion: reduce) {
+          .tech-particle,
+          .tech-hub,
+          .tech-item {
+            animation: none;
+          }
+          
+          .tech-stack-card {
+            transition: none;
+          }
+        }
+
+        /* 모달 애니메이션 (기존 유지) */
+        @keyframes modalBackdropFadeIn {
+          from {
+            background-color: rgba(0, 0, 0, 0);
+            backdrop-filter: blur(0px);
+          }
+          to {
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(8px);
+          }
+        }
+
+        @keyframes modalBackdropFadeOut {
+          from {
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(8px);
+          }
+          to {
+            background-color: rgba(0, 0, 0, 0);
+            backdrop-filter: blur(0px);
+          }
+        }
+
+        @keyframes modalSlideIn {
+          from {
+            opacity: 0;
+            transform: scale(0.9) translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+          }
+        }
+
+        @keyframes modalSlideOut {
+          from {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+          }
+          to {
+            opacity: 0;
+            transform: scale(0.9) translateY(20px);
+          }
+        }
+
+        .modal-button {
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .modal-button:hover {
+          transform: scale(1.1);
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .gallery-image {
+          transition: opacity 0.5s ease-in-out;
+        }
+
+        .gallery-image.changing {
+          opacity: 0.7;
+        }
+
+        .thumbnail {
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .thumbnail:hover {
+          transform: scale(1.1) rotate(2deg);
+          box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+        }
+
+        .thumbnail.active {
+          transform: scale(1.05);
+          box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
+        }
+      `}</style>
     </section>
   );
 };

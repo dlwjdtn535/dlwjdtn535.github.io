@@ -9,19 +9,131 @@
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="{{ '/img/favicon.ico' | relative_url }}">
   
-  <!-- Bootstrap Core CSS -->
-  <link href="{{ '/css/bootstrap.min.css' | relative_url }}" rel="stylesheet">
+  <!-- Tailwind CSS CDN (development와 동일) -->
+  <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Custom CSS -->
-  <link href="{{ '/css/freelancer.css' | relative_url }}" rel="stylesheet">
+  <!-- Tailwind Config (development와 동일) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sans': ['Noto Sans KR', 'sans-serif'],
+          },
+          animation: {
+            'fadeInUp': 'fadeInUp 0.8s ease-out forwards',
+            'fadeInLeft': 'fadeInLeft 0.8s ease-out forwards',
+            'fadeInRight': 'fadeInRight 0.8s ease-out forwards',
+            'scaleIn': 'scaleIn 0.6s ease-out forwards',
+            'slideInUp': 'slideInUp 0.6s ease-out forwards',
+            'bounce-slow': 'bounce 2s infinite',
+            'spin-slow': 'spin 3s linear infinite',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            },
+            fadeInLeft: {
+              '0%': { opacity: '0', transform: 'translateX(-30px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' }
+            },
+            fadeInRight: {
+              '0%': { opacity: '0', transform: 'translateX(30px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' }
+            },
+            scaleIn: {
+              '0%': { opacity: '0', transform: 'scale(0.9)' },
+              '100%': { opacity: '1', transform: 'scale(1)' }
+            },
+            slideInUp: {
+              '0%': { opacity: '0', transform: 'translateY(100%)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            }
+          },
+          colors: {
+            primary: {
+              50: '#eff6ff',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+            }
+          }
+        }
+      }
+    }
+  </script>
   
-  <!-- Vite 빌드된 CSS -->
+  <!-- Vite 빌드된 CSS (보조적으로 로드) -->
   <link href="{{ '/js/react-build/app.css' | relative_url }}" rel="stylesheet">
   
-  <!-- Custom Fonts -->
-  <link href="{{ '/font-awesome/css/font-awesome.min.css' | relative_url }}" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <!-- Custom Styles (development와 동일) -->
+  <style>
+    /* 스크롤바 스타일링 */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
+      border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(to bottom, #2563eb, #7c3aed);
+    }
+    
+    /* 부드러운 스크롤 */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* 초기 애니메이션 상태 */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-out;
+    }
+    
+    .animate-on-scroll.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* 로딩 상태 */
+    .loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #1e40af 50%, #6366f1 75%, #8b5cf6 100%);
+      background-size: 400% 400%;
+      animation: gradientShift 8s ease-in-out infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      opacity: 1;
+      transition: opacity 0.8s ease-out;
+      overflow: hidden;
+    }
+    
+    .loading.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+  </style>
 </head>
 
 <body id="page-top" class="index">
@@ -33,25 +145,7 @@
     {{ content }}
   </noscript>
 
-  <!-- jQuery -->
-  <script src="{{ '/js/jquery-1.11.0.js' | relative_url }}"></script>
-  
-  <!-- Bootstrap Core JavaScript -->
-  <script src="{{ '/js/bootstrap.min.js' | relative_url }}"></script>
-  
-  <!-- Plugin JavaScript -->
-  <script src="{{ '/js/jquery.easing.min.js' | relative_url }}"></script>
-  <script src="{{ '/js/classie.js' | relative_url }}"></script>
-  <script src="{{ '/js/cbpAnimatedHeader.js' | relative_url }}"></script>
-  
-  <!-- Contact Form JavaScript -->
-  <script src="{{ '/js/jqBootstrapValidation.js' | relative_url }}"></script>
-  <script src="{{ '/js/contact_me_static.js' | relative_url }}"></script>
-  
-  <!-- Custom Theme JavaScript -->
-  <script src="{{ '/js/freelancer.js' | relative_url }}"></script>
-  
   <!-- Vite 빌드된 React 앱 -->
   <script src="{{ '/js/react-build/app.bundle.js' | relative_url }}"></script>
 </body>
-</html> 
+</html>
