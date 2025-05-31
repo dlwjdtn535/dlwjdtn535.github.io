@@ -1,16 +1,16 @@
 # Site settings
-title: "이정수 - 시니어 풀스택 개발자 포트폴리오"
-description: "2014년부터 10년 이상의 실무 경험을 가진 시니어 풀스택 개발자 이정수의 포트폴리오. Spring Boot, Java, React, AWS 전문. 교육, 부동산, 커머스, 핀테크, 모빌리티 등 다양한 도메인에서 30여 개 프로젝트 완료."
+title: "J.S - 시니어 풀스택 개발자 포트폴리오"
+description: "2014년부터 10년 이상의 실무 경험을 가진 시니어 풀스택 개발자의 포트폴리오. Spring Boot, Java, React, AWS 전문. 교육, 부동산, 커머스, 핀테크, 모빌리티 등 다양한 도메인에서 30여 개 프로젝트 완료."
 url: "https://dlwjdtn535.github.io"
 baseurl: ""
 
 # Author information
 author:
   name: "이정수 (J.S LEE)"
-  email: "dlwjdtn535@gmail.com"
+  email: "dlwjdtn535@naver.com"
   bio: "10년 이상의 실무 경험을 가진 시니어 풀스택 개발자"
   github: "dlwjdtn535"
-  linkedin: "jslee-dev"
+  linkedin: "dlwjdtn535"
 
 # SEO settings
 lang: ko_KR
@@ -22,7 +22,7 @@ social:
   name: "이정수"
   links:
     - "https://github.com/dlwjdtn535"
-    - "https://linkedin.com/in/jslee-dev"
+    - "https://www.linkedin.com/in/dlwjdtn535/"
 
 # Build settings
 markdown: kramdown
@@ -81,6 +81,7 @@ include:
   - _layouts
   - .htaccess
   - robots.txt
+  - aa2451c6c6c64105be9aeb2ae7e541b8.txt
 
 # SEO tag settings
 tag_page_layout: tag_page
