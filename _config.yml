@@ -1,15 +1,8 @@
 # Site settings
-title: "J.S LEE Portfolio"
-name: "J.S"
-email: "dlwjdtn5624@naver.com"
-description: >-
-  시니어 풀스택 개발자 J.S의 포트폴리오. 10년 이상의 실무 경험과 
-  Spring Boot, React, AWS 전문성을 바탕으로 다양한 프로젝트를 성공적으로 완료했습니다.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://dlwjdtn535.github.io" # the base hostname & protocol for your site
-twitter_username: dlwjdtn535
-github_username: dlwjdtn535
-linkedin_username: dlwjdtn535
+title: "J.S - 시니어 풀스택 개발자 포트폴리오"
+description: "2014년부터 10년 이상의 실무 경험을 가진 시니어 풀스택 개발자의 포트폴리오. Spring Boot, Java, React, AWS 전문. 교육, 부동산, 커머스, 핀테크, 모빌리티 등 다양한 도메인에서 30여 개 프로젝트 완료."
+url: "https://dlwjdtn535.github.io"
+baseurl: ""
 
 # Author information
 author:
@@ -85,6 +78,7 @@ include:
   - _pages
   - js/react-build
   - public
+  - aa2451c6c6c64105be9aeb2ae7e541b8.txt
 
 # SEO tag settings
 tag_page_layout: tag_page
