@@ -25,7 +25,7 @@ export default defineConfig({
 
   // 개발용 HTML 파일 설정
   root: '.',
-  publicDir: 'img', // 이미지 등 정적 파일 디렉토리
+  publicDir: 'public', // 이미지 등 정적 파일 디렉토리
 
   // 빌드 설정
   build: {
@@ -42,8 +42,8 @@ export default defineConfig({
         entryFileNames: '[name].bundle.js',
         chunkFileNames: '[name].chunk.js',
         assetFileNames: '[name].[ext]',
-        // 코드 분할 비활성화 - 모든 것을 하나의 파일로
-        manualChunks: undefined,
+        format: 'es', // ES 모듈 형식으로 출력
+
       },
     },
     

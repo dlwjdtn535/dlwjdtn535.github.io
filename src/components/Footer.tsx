@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
       title: '연결',
       links: [
         { name: 'GitHub', href: 'https://github.com/dlwjdtn535' },
-        { name: 'LinkedIn', href: '#' },
+        { name: 'LinkedIn', href: 'https://linkedin.com/in/dlwjdtn535' },
         { name: 'Twitter', href: '#' },
         { name: 'Email', href: 'mailto:dlwjdtn5624@naver.com' },
       ],

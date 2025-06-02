@@ -228,7 +228,7 @@ export const Header: React.FC = () => {
                 {/* 프로필 이미지 */}
                 <div className='relative overflow-hidden rounded-full border-4 border-white/20 shadow-2xl transition-all duration-700 group-hover:scale-105 group-hover:border-white/40'>
                   <img
-                    src='/public/images/projects/profile.jpeg'
+                    src='/images/projects/profile.jpeg'
                     alt='이정수 - 시니어 풀스택 개발자'
                     className='h-80 w-80 object-cover transition-all duration-700 group-hover:scale-110 sm:h-96 sm:w-96 lg:h-[28rem] lg:w-[28rem]'
                   />

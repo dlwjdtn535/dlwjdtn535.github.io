@@ -1,3 +1,48 @@
+/* 배달의민족 폰트 정의 */
+@font-face {
+  font-family: 'BMHANNA';
+  src: url('/fonts/BMHANNA_11yrs_ttf.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BMHANNAPro';
+  src: url('/fonts/BMHANNAPro.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BMJUA';
+  src: url('/fonts/BMJUA_ttf.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 전역 폰트 적용 */
+* {
+  font-family: 'BMHANNAPro', 'BMHANNAPro', 'BMJUA', 'Malgun Gothic', 'Apple Gothic', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* 제목용 폰트 */
+/*h1, h2, h3, h4, h5, h6 {*/
+/*  font-family: 'BMHANNAPro', 'Malgun Gothic', 'Apple Gothic', sans-serif !important;*/
+/*}*/
+
+/*!* 본문용 폰트 *!*/
+/*p, span, div, li, td, th {*/
+/*  font-family: 'BMHANNAPro', 'Malgun Gothic', 'Apple Gothic', sans-serif !important;*/
+/*}*/
+
+/*!* 버튼 및 강조 텍스트용 폰트 *!*/
+/*button, .btn, input, textarea, select {*/
+/*  font-family: 'BMHANNAPro', 'Malgun Gothic', 'Apple Gothic', sans-serif !important;*/
+/*}*/
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

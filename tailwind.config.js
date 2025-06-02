@@ -48,7 +48,10 @@ module.exports = {
         }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        'sans': ['BMHANNA', 'BMHANNAPro', 'BMJUA', 'sans-serif'],
+        'baemin': ['BMHANNA', 'sans-serif'],
+        'baemin-pro': ['BMHANNAPro', 'sans-serif'],
+        'baemin-jua': ['BMJUA', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
         display: ['Cal Sans', 'Inter', 'ui-sans-serif', 'system-ui'],
       },

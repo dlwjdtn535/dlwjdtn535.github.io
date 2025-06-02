@@ -1,16 +1,24 @@
 # Site settings
-title: "이정수 - 시니어 풀스택 개발자 포트폴리오"
-description: "2014년부터 10년 이상의 실무 경험을 가진 시니어 풀스택 개발자 이정수의 포트폴리오. Spring Boot, Java, React, AWS 전문. 교육, 부동산, 커머스, 핀테크, 모빌리티 등 다양한 도메인에서 30여 개 프로젝트 완료."
-url: "https://dlwjdtn535.github.io"
-baseurl: ""
+title: "J.S LEE Portfolio"
+name: "J.S"
+email: "dlwjdtn5624@naver.com"
+description: >-
+  시니어 풀스택 개발자 J.S의 포트폴리오. 10년 이상의 실무 경험과 
+  Spring Boot, React, AWS 전문성을 바탕으로 다양한 프로젝트를 성공적으로 완료했습니다.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://dlwjdtn535.github.io" # the base hostname & protocol for your site
+twitter_username: dlwjdtn535
+github_username: dlwjdtn535
+linkedin_username: dlwjdtn535
 
 # Author information
 author:
-  name: "이정수 (J.S LEE)"
-  email: "dlwjdtn535@gmail.com"
+  name: "J.S"
+  email: "dlwjdtn5624@naver.com"
   bio: "10년 이상의 실무 경험을 가진 시니어 풀스택 개발자"
   github: "dlwjdtn535"
-  linkedin: "jslee-dev"
+  linkedin: "dlwjdtn535"
+  twitter: "dlwjdtn535"
 
 # SEO settings
 lang: ko_KR
@@ -19,10 +27,11 @@ timezone: Asia/Seoul
 
 # Social media
 social:
-  name: "이정수"
+  name: J.S LEE
   links:
-    - "https://github.com/dlwjdtn535"
-    - "https://linkedin.com/in/jslee-dev"
+    - https://github.com/dlwjdtn535
+    - https://linkedin.com/in/dlwjdtn535
+    - https://twitter.com/dlwjdtn535
 
 # Build settings
 markdown: kramdown
@@ -36,14 +45,6 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-seo-tag
-
-# Sitemap settings
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: "default"
-      sitemap: true
 
 # Feed settings
 feed:
@@ -81,6 +82,9 @@ include:
   - _layouts
   - .htaccess
   - robots.txt
+  - _pages
+  - js/react-build
+  - public
 
 # SEO tag settings
 tag_page_layout: tag_page
@@ -90,3 +94,23 @@ tag_page_dir: tag
 future: false
 show_drafts: false
 unpublished: false
+
+# Copy Vite build assets
+defaults:
+  - scope:
+      path: "js/react-build"
+    values:
+      layout: null
+      sitemap: false
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+      sitemap: true
+
+# Static file serving
+static_files:
+  - "*.woff"
+  - "*.woff2"
+  - "*.ttf"
+  - "*.otf"

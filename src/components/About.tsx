@@ -254,8 +254,8 @@ export const About: React.FC = () => {
         ],
         color: 'from-slate-400 to-gray-500',
         images: [
-          '/public/images/projects/acanet_1.png',
-          '/public/images/projects/acanet_2.png',
+          '/images/projects/acanet_1.png',
+          '/images/projects/acanet_2.png',
         ],
         imageTitles: ['LMS 플랫폼', '학사관리 시스템'],
         tech: ['LMS', 'Education Portal', 'Content Management', 'Java'],
@@ -273,11 +273,11 @@ export const About: React.FC = () => {
         ],
         color: 'from-blue-400 to-indigo-500',
         images: [
-          '/public/images/projects/naon_1.png',
-          '/public/images/projects/naon_2.png',
-          '/public/images/projects/naon_3.png',
-          '/public/images/projects/naon_4.png',
-          '/public/images/projects/naon_5.png',
+          '/images/projects/naon_1.png',
+          '/images/projects/naon_2.png',
+          '/images/projects/naon_3.png',
+          '/images/projects/naon_4.png',
+          '/images/projects/naon_5.png',
         ],
         imageTitles: [
           '포털 메인',
@@ -301,10 +301,10 @@ export const About: React.FC = () => {
         ],
         color: 'from-green-400 to-emerald-500',
         images: [
-          '/public/images/projects/dabang_2.png',
-          '/public/images/projects/dabang_1.png',
-          '/public/images/projects/dabang_3.png',
-          '/public/images/projects/dabang_4.png',
+          '/images/projects/dabang_2.png',
+          '/images/projects/dabang_1.png',
+          '/images/projects/dabang_3.png',
+          '/images/projects/dabang_4.png',
         ],
         imageTitles: [
           '매물 검색 1',
@@ -326,9 +326,9 @@ export const About: React.FC = () => {
         ],
         color: 'from-violet-400 to-purple-500',
         images: [
-          '/public/images/projects/tour_1.png',
-          '/public/images/projects/tour_2.png',
-          '/public/images/projects/tour_3.png',
+          '/images/projects/tour_1.png',
+          '/images/projects/tour_2.png',
+          '/images/projects/tour_3.png',
         ],
         imageTitles: [
           '통합검색 시스템',
@@ -350,7 +350,7 @@ export const About: React.FC = () => {
           '로그인, 운영자권한관리, 회원관리 API 개발',
         ],
         color: 'from-teal-400 to-cyan-500',
-        images: ['/public/images/projects/hiphoper_1.png'],
+        images: ['/images/projects/hiphoper_1.png'],
         imageTitles: ['힙합퍼 메인 페이지'],
         tech: ['MSA', 'GitLab CI/CD', 'OAS3', 'REST DOC'],
       },
@@ -388,15 +388,15 @@ export const About: React.FC = () => {
         ],
         color: 'from-pink-400 to-rose-500',
         images: [
-          '/public/images/projects/metapost_4.png',
-          '/public/images/projects/metapost_1.png',
-          '/public/images/projects/metapost_2.png',
-          '/public/images/projects/metapost_3.png',
-          '/public/images/projects/metapost_5.png',
-          '/public/images/projects/metapost_6.png',
-          '/public/images/projects/metapost_7.png',
-          '/public/images/projects/metapost_8.png',
-          '/public/images/projects/metapost_9.png',
+          '/images/projects/metapost_4.png',
+          '/images/projects/metapost_1.png',
+          '/images/projects/metapost_2.png',
+          '/images/projects/metapost_3.png',
+          '/images/projects/metapost_5.png',
+          '/images/projects/metapost_6.png',
+          '/images/projects/metapost_7.png',
+          '/images/projects/metapost_8.png',
+          '/images/projects/metapost_9.png',
         ],
         imageTitles: [
           '메인 페이지',
@@ -426,13 +426,13 @@ export const About: React.FC = () => {
         ],
         color: 'from-indigo-400 to-purple-500',
         images: [
-          '/public/images/projects/theblack_1.png',
-          '/public/images/projects/theblack_2.png',
-          '/public/images/projects/theblack_3.png',
-          '/public/images/projects/theblack_4.png',
-          '/public/images/projects/theblack_5.png',
-          '/public/images/projects/theblack_6.png',
-          '/public/images/projects/theblack_7.png',
+          '/images/projects/theblack_1.png',
+          '/images/projects/theblack_2.png',
+          '/images/projects/theblack_3.png',
+          '/images/projects/theblack_4.png',
+          '/images/projects/theblack_5.png',
+          '/images/projects/theblack_6.png',
+          '/images/projects/theblack_7.png',
         ],
         imageTitles: [
           '메인',
@@ -458,11 +458,11 @@ export const About: React.FC = () => {
         ],
         color: 'from-cyan-400 to-blue-500',
         images: [
-          '/public/images/projects/malohae_1.png',
-          '/public/images/projects/malohae_2.png',
-          '/public/images/projects/malohae_3.png',
-          '/public/images/projects/malohae_4.png',
-          '/public/images/projects/malohae_5.png',
+          '/images/projects/malohae_1.png',
+          '/images/projects/malohae_2.png',
+          '/images/projects/malohae_3.png',
+          '/images/projects/malohae_4.png',
+          '/images/projects/malohae_5.png',
         ],
         imageTitles: ['장부 관리 앱', '통계 대시보드', '월별 달력 뷰'],
         tech: ['Flutter', 'Spring Boot', 'AWS EC2', 'RDS'],
@@ -482,9 +482,9 @@ export const About: React.FC = () => {
         ],
         color: 'from-orange-400 to-red-500',
         images: [
-          '/public/images/projects/fresh_3.jpeg',
-          '/public/images/projects/fresh_2.jpeg',
-          '/public/images/projects/fresh_1.jpeg',
+          '/images/projects/fresh_3.jpeg',
+          '/images/projects/fresh_2.jpeg',
+          '/images/projects/fresh_1.jpeg',
         ],
         imageTitles: ['메인', '상품 상세 페이지', '장바구니 & 결제'],
         tech: ['Next.js 13', 'Spring Boot 3.x', 'Redis', 'Jenkins'],
@@ -504,12 +504,12 @@ export const About: React.FC = () => {
         ],
         color: 'from-purple-400 to-pink-500',
         images: [
-          '/public/images/projects/lush_1.png',
-          '/public/images/projects/lush_2.png',
-          '/public/images/projects/lush_3.png',
-          '/public/images/projects/lush_6.png',
-          '/public/images/projects/lush_4.png',
-          '/public/images/projects/lush_5.png',
+          '/images/projects/lush_1.png',
+          '/images/projects/lush_2.png',
+          '/images/projects/lush_3.png',
+          '/images/projects/lush_6.png',
+          '/images/projects/lush_4.png',
+          '/images/projects/lush_5.png',
         ],
         imageTitles: [
           '메인',
@@ -535,11 +535,11 @@ export const About: React.FC = () => {
         ],
         color: 'from-emerald-400 to-green-500',
         images: [
-          '/public/images/projects/criee_5.PNG',
-          '/public/images/projects/criee_1.PNG',
-          '/public/images/projects/criee_2.PNG',
-          '/public/images/projects/criee_3.PNG',
-          '/public/images/projects/criee_4.PNG',
+          '/images/projects/criee_5.PNG',
+          '/images/projects/criee_1.PNG',
+          '/images/projects/criee_2.PNG',
+          '/images/projects/criee_3.PNG',
+          '/images/projects/criee_4.PNG',
         ],
         imageTitles: [
           '웹 메인',
@@ -562,7 +562,7 @@ export const About: React.FC = () => {
           '어드민 스케줄링 주행, 승객, 예약 데이터 수집 개발',
         ],
         color: 'from-blue-400 to-cyan-500',
-        images: ['/public/images/projects/auto_1.png'],
+        images: ['/images/projects/auto_1.png'],
         imageTitles: ['주행 관제 시스템'],
         tech: ['Spring Boot', 'Kotlin', 'React', 'AWS', 'PostgreSQL'],
       },
@@ -721,8 +721,11 @@ export const About: React.FC = () => {
                   {/* 프로젝트 년도 표시 - 이전 년도와 다를 때만 표시 */}
                   {(() => {
                     const currentYear = exp.period.split('.')[0];
-                    const prevYear = index > 0 ? experiences[index - 1].period.split('.')[0] : '';
-                    
+                    const prevYear =
+                      index > 0
+                        ? experiences[index - 1].period.split('.')[0]
+                        : '';
+
                     // 이전 년도와 다를 때만 표시
                     if (currentYear !== prevYear) {
                       return (
