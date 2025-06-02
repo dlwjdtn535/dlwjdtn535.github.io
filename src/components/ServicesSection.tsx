@@ -1635,13 +1635,13 @@ export const ServicesSection: React.FC = () => {
   return (
     <section
       id='services'
-      className='relative min-h-screen overflow-hidden bg-gradient-to-br from-gray-900 via-slate-900 to-black'
+      className='relative min-h-screen overflow-hidden bg-gradient-to-br from-white via-gray-50 to-blue-50'
     >
       {/* 간소화된 배경 효과 */}
       <div className='absolute inset-0'>
-        <div className='absolute right-1/4 top-1/4 h-96 w-96 animate-pulse rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 blur-3xl filter' />
+        <div className='absolute right-1/4 top-1/4 h-96 w-96 animate-pulse rounded-full bg-gradient-to-r from-blue-100/40 to-purple-100/40 blur-3xl filter' />
         <div
-          className='absolute bottom-1/4 left-1/4 h-96 w-96 animate-pulse rounded-full bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 blur-3xl filter'
+          className='absolute bottom-1/4 left-1/4 h-96 w-96 animate-pulse rounded-full bg-gradient-to-r from-emerald-100/40 to-cyan-100/40 blur-3xl filter'
           style={{ animationDelay: '2s' }}
         />
       </div>
@@ -1649,16 +1649,16 @@ export const ServicesSection: React.FC = () => {
       <div className='container relative z-10 mx-auto px-4 py-20'>
         {/* 섹션 헤더 */}
         <div className='mb-16 text-center'>
-          <h2 className='mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-5xl font-bold text-transparent md:text-7xl'>
+          <h2 className='mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-5xl font-bold text-transparent md:text-7xl'>
             Services & Solutions
           </h2>
           <div className='mx-auto mb-6 h-1 w-24 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500' />
-          <p className='mx-auto max-w-4xl text-lg leading-relaxed text-gray-300 md:text-xl'>
-            <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text font-semibold text-transparent'>
+          <p className='mx-auto max-w-4xl text-lg leading-relaxed text-gray-700 md:text-xl'>
+            <span className='bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text font-semibold text-transparent'>
               Next.js & React 기반
             </span>
             으로 구현 가능한 엔터프라이즈급 솔루션들입니다.
-            <span className='font-semibold text-emerald-400'>
+            <span className='font-semibold text-emerald-600'>
               AI, 커머스, SaaS, 대시보드
             </span>{' '}
             등 모든 도메인의 고품질 인터페이스 개발이 가능합니다.
@@ -1674,8 +1674,8 @@ export const ServicesSection: React.FC = () => {
                 onClick={() => setActiveCategory(category.id)}
                 className={`rounded-xl border-2 px-4 py-3 font-semibold transition-all duration-300 ${
                   activeCategory === category.id
-                    ? 'scale-105 border-blue-500/50 bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
-                    : 'border-white/20 bg-white/10 text-gray-300 backdrop-blur-xl hover:border-white/40 hover:bg-white/20'
+                    ? 'scale-105 border-blue-500 bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
+                    : 'border-gray-300 bg-white/80 text-gray-700 backdrop-blur-xl hover:border-gray-400 hover:bg-white/90 hover:shadow-md'
                 }`}
               >
                 <div className='flex items-center gap-2'>
@@ -1685,7 +1685,7 @@ export const ServicesSection: React.FC = () => {
                     className={`rounded-full px-2 py-1 text-xs ${
                       activeCategory === category.id
                         ? 'bg-white/20 text-white'
-                        : 'bg-blue-500/20 text-blue-300'
+                        : 'bg-blue-100 text-blue-700'
                     }`}
                   >
                     {category.count}
@@ -1701,7 +1701,7 @@ export const ServicesSection: React.FC = () => {
           {filteredServices.map(service => (
             <div
               key={service.id}
-              className='group transform rounded-xl border border-white/10 bg-white/10 p-6 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:border-white/30'
+              className='group transform rounded-xl border border-gray-200 bg-white/90 p-6 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:border-gray-300 hover:shadow-xl'
             >
               {/* 서비스 헤더 */}
               <div className='mb-4 flex items-center gap-4'>
@@ -1711,30 +1711,30 @@ export const ServicesSection: React.FC = () => {
                   {service.icon}
                 </div>
                 <div className='flex-1'>
-                  <h3 className='text-lg font-bold text-white transition-colors duration-300 group-hover:text-blue-300'>
+                  <h3 className='text-lg font-bold text-gray-900 transition-colors duration-300 group-hover:text-blue-600'>
                     {service.title}
                   </h3>
-                  <div className='text-xs capitalize text-gray-400'>
+                  <div className='text-xs capitalize text-gray-600'>
                     {service.category}
                   </div>
                 </div>
               </div>
 
               {/* 설명 */}
-              <p className='mb-4 text-sm leading-relaxed text-gray-300'>
+              <p className='mb-4 text-sm leading-relaxed text-gray-700'>
                 {service.description}
               </p>
 
               {/* 주요 기능 */}
               <div className='mb-4'>
-                <h4 className='mb-2 text-xs font-semibold text-gray-400'>
+                <h4 className='mb-2 text-xs font-semibold text-gray-600'>
                   주요 기능
                 </h4>
                 <div className='flex flex-wrap gap-1'>
                   {service.features.slice(0, 4).map((feature, index) => (
                     <span
                       key={index}
-                      className='inline-block rounded-full border border-emerald-500/30 bg-emerald-500/20 px-2 py-1 text-xs text-emerald-200'
+                      className='inline-block rounded-full border border-emerald-200 bg-emerald-50 px-2 py-1 text-xs text-emerald-700'
                     >
                       {feature}
                     </span>
@@ -1744,14 +1744,14 @@ export const ServicesSection: React.FC = () => {
 
               {/* 기술 스택 */}
               <div className='mb-4'>
-                <h4 className='mb-2 text-xs font-semibold text-gray-400'>
+                <h4 className='mb-2 text-xs font-semibold text-gray-600'>
                   기술 스택
                 </h4>
                 <div className='flex flex-wrap gap-1'>
                   {service.tech.map((tech, index) => (
                     <span
                       key={index}
-                      className='inline-block rounded-full border border-blue-500/30 bg-blue-500/20 px-2 py-1 text-xs text-blue-200'
+                      className='inline-block rounded-full border border-blue-200 bg-blue-50 px-2 py-1 text-xs text-blue-700'
                     >
                       {tech}
                     </span>

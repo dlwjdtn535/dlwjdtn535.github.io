@@ -53,10 +53,10 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className='relative overflow-hidden bg-gradient-to-br from-gray-900 via-slate-900 to-black text-white'>
+    <footer className='relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-blue-50 text-gray-900'>
       {/* 간소화된 배경 효과 */}
-      <div className='absolute inset-0 bg-gradient-to-t from-black/50 to-transparent' />
-      <div className='absolute left-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-blue-500/50 to-transparent' />
+      <div className='absolute inset-0 bg-gradient-to-t from-gray-100/50 to-transparent' />
+      <div className='absolute left-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-blue-300/50 to-transparent' />
 
       <div className='container relative z-10 mx-auto px-4'>
         {/* 메인 푸터 내용 */}
@@ -65,11 +65,11 @@ const Footer: React.FC = () => {
             {/* 브랜드 섹션 */}
             <div className='lg:col-span-1'>
               <div className='space-y-4'>
-                <h3 className='bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-2xl font-bold text-transparent'>
+                <h3 className='bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-2xl font-bold text-transparent'>
                   Portfolio
                 </h3>
-                <p className='leading-relaxed text-gray-300'>
-                  <span className='font-semibold text-emerald-400'>
+                <p className='leading-relaxed text-gray-700'>
+                  <span className='font-semibold text-emerald-600'>
                     10년+ 전문 경험
                   </span>
                   을 바탕으로 확장 가능하고 혁신적인 디지털 솔루션을 제공합니다.
@@ -127,10 +127,10 @@ const Footer: React.FC = () => {
                       href={social.href}
                       target='_blank'
                       rel='noopener noreferrer'
-                      className='group flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors duration-200 hover:bg-white/20'
+                      className='group flex h-10 w-10 items-center justify-center rounded-full bg-gray-200 transition-colors duration-200 hover:bg-gray-300'
                       aria-label={social.name}
                     >
-                      <div className='text-gray-400 transition-colors duration-200 group-hover:text-white'>
+                      <div className='text-gray-600 transition-colors duration-200 group-hover:text-gray-900'>
                         {social.icon}
                       </div>
                     </a>
@@ -142,7 +142,7 @@ const Footer: React.FC = () => {
             {/* 링크 섹션들 */}
             {footerLinks.map(section => (
               <div key={section.title} className='space-y-4'>
-                <h4 className='mb-4 text-lg font-semibold text-white'>
+                <h4 className='mb-4 text-lg font-semibold text-gray-900'>
                   {section.title}
                 </h4>
                 <ul className='space-y-3'>
@@ -158,9 +158,9 @@ const Footer: React.FC = () => {
                             ? 'noopener noreferrer'
                             : undefined
                         }
-                        className='group text-gray-400 transition-colors duration-200 hover:text-white'
+                        className='group text-gray-600 transition-colors duration-200 hover:text-gray-900'
                       >
-                        <span className='border-b border-transparent transition-colors duration-200 group-hover:border-blue-400'>
+                        <span className='border-b border-transparent transition-colors duration-200 group-hover:border-blue-600'>
                           {link.name}
                         </span>
                       </a>
@@ -174,9 +174,9 @@ const Footer: React.FC = () => {
 
         {/* 하단 구분선 및 저작권 */}
         <div>
-          <div className='border-t border-gray-800 pb-6 pt-8'>
+          <div className='border-t border-gray-200 pb-6 pt-8'>
             <div className='flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0'>
-              <div className='text-sm text-gray-400'>
+              <div className='text-sm text-gray-600'>
                 <p>
                   © {currentYear} Portfolio. All rights reserved.
                   <span className='ml-4 text-gray-500'>
@@ -188,22 +188,22 @@ const Footer: React.FC = () => {
               <div className='flex items-center space-x-6'>
                 <a
                   href='#'
-                  className='text-sm text-gray-400 transition-colors duration-200 hover:text-white'
+                  className='text-sm text-gray-600 transition-colors duration-200 hover:text-gray-900'
                 >
                   개인정보처리방침
                 </a>
                 <a
                   href='#'
-                  className='text-sm text-gray-400 transition-colors duration-200 hover:text-white'
+                  className='text-sm text-gray-600 transition-colors duration-200 hover:text-gray-900'
                 >
                   이용약관
                 </a>
                 <button
                   onClick={scrollToTop}
-                  className='group flex items-center space-x-2 text-sm text-gray-400 transition-colors duration-200 hover:text-white'
+                  className='group flex items-center space-x-2 text-sm text-gray-600 transition-colors duration-200 hover:text-gray-900'
                 >
                   <span>맨 위로</span>
-                  <div className='flex h-6 w-6 items-center justify-center rounded-full bg-white/10 transition-colors duration-200 group-hover:bg-white/20'>
+                  <div className='flex h-6 w-6 items-center justify-center rounded-full bg-gray-200 transition-colors duration-200 group-hover:bg-gray-300'>
                     <svg
                       className='h-3 w-3'
                       fill='none'
@@ -226,7 +226,7 @@ const Footer: React.FC = () => {
       </div>
 
       {/* 하단 장식적 그래디언트 */}
-      <div className='absolute bottom-0 left-0 h-px w-full bg-gradient-to-r from-transparent via-purple-500/50 to-transparent' />
+      <div className='absolute bottom-0 left-0 h-px w-full bg-gradient-to-r from-transparent via-purple-300/50 to-transparent' />
 
       {/* 간소화된 Scroll to Top Button */}
       {showScrollTop && (

@@ -573,13 +573,13 @@ export const About: React.FC = () => {
   return (
     <section
       id='about'
-      className='relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-purple-950'
+      className='relative min-h-screen overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50'
     >
       {/* 간소화된 배경 효과 */}
       <div className='absolute inset-0'>
-        <div className='absolute left-1/4 top-1/4 h-96 w-96 animate-pulse rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 blur-3xl filter' />
+        <div className='absolute left-1/4 top-1/4 h-96 w-96 animate-pulse rounded-full bg-gradient-to-r from-blue-100/50 to-purple-100/50 blur-3xl filter' />
         <div
-          className='absolute bottom-1/4 right-1/4 h-96 w-96 animate-pulse rounded-full bg-gradient-to-r from-cyan-500/20 to-pink-500/20 blur-3xl filter'
+          className='absolute bottom-1/4 right-1/4 h-96 w-96 animate-pulse rounded-full bg-gradient-to-r from-cyan-100/50 to-pink-100/50 blur-3xl filter'
           style={{ animationDelay: '2s' }}
         />
       </div>
@@ -587,16 +587,16 @@ export const About: React.FC = () => {
       <div className='container relative z-10 mx-auto px-4 py-20'>
         {/* 섹션 헤더 */}
         <AnimatedSection animation='fadeInUp' className='mb-16 text-center'>
-          <h2 className='mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-5xl font-bold text-transparent md:text-7xl'>
+          <h2 className='mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-5xl font-bold text-transparent md:text-7xl'>
             About Me
           </h2>
           <div className='mx-auto mb-6 h-1 w-24 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500' />
-          <p className='mx-auto max-w-3xl text-lg leading-relaxed text-gray-300 md:text-xl'>
-            <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text font-semibold text-transparent'>
+          <p className='mx-auto max-w-3xl text-lg leading-relaxed text-gray-700 md:text-xl'>
+            <span className='bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text font-semibold text-transparent'>
               2014년부터 10년 이상의 엔터프라이즈급 개발 경험
             </span>
             을 바탕으로
-            <span className='font-semibold text-emerald-400'>
+            <span className='font-semibold text-emerald-600'>
               {' '}
               교육, 부동산, 커머스, 핀테크, 모빌리티
             </span>{' '}
@@ -615,7 +615,7 @@ export const About: React.FC = () => {
                 delay={50}
                 className='group'
               >
-                <div className='relative transform rounded-xl border border-white/20 bg-white/10 p-4 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:border-white/40'>
+                <div className='relative transform rounded-xl border border-gray-200 bg-white/80 p-4 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:border-gray-300 hover:shadow-lg'>
                   <div className='text-center'>
                     <div className='mb-3 text-3xl'>{stat.icon}</div>
                     <div
@@ -623,7 +623,7 @@ export const About: React.FC = () => {
                     >
                       {stat.number}
                     </div>
-                    <div className='text-sm font-medium text-gray-300'>
+                    <div className='text-sm font-medium text-gray-700'>
                       {stat.label}
                     </div>
                   </div>
@@ -636,9 +636,9 @@ export const About: React.FC = () => {
         {/* 경력 타임라인 */}
         <div className='mb-16'>
           <div className='mb-12 text-center'>
-            <h3 className='mb-4 text-3xl font-bold text-white md:text-4xl'>
+            <h3 className='mb-4 text-3xl font-bold text-gray-900 md:text-4xl'>
               Career{' '}
-              <span className='bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent'>
+              <span className='bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>
                 Journey
               </span>
             </h3>
@@ -730,8 +730,8 @@ export const About: React.FC = () => {
                     if (currentYear !== prevYear) {
                       return (
                         <div className='z-25 absolute left-8 top-0 md:left-1/2 md:-translate-x-1/2'>
-                          <div className='rounded-md bg-gradient-to-r from-gray-800/90 to-gray-700/90 px-2 py-1 backdrop-blur-sm'>
-                            <span className='text-xs font-medium text-gray-200'>
+                          <div className='rounded-md bg-gradient-to-r from-blue-600 to-purple-600 px-2 py-1'>
+                            <span className='text-xs font-medium text-white'>
                               {currentYear}
                             </span>
                           </div>
@@ -745,17 +745,17 @@ export const About: React.FC = () => {
                   <div
                     className={`ml-16 w-full md:ml-0 md:w-5/12 ${index % 2 === 0 ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'}`}
                   >
-                    <div className='transform rounded-xl border border-white/20 bg-white/10 p-6 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-white/40'>
+                    <div className='transform rounded-xl border border-gray-200 bg-white p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-gray-300 hover:shadow-xl'>
                       <div className='mb-4'>
                         <h4
                           className={`bg-gradient-to-r text-xl font-bold ${exp.color} mb-2 bg-clip-text text-transparent`}
                         >
                           {exp.role}
                         </h4>
-                        <p className='mb-1 text-lg font-semibold text-blue-300'>
+                        <p className='mb-1 text-lg font-semibold text-blue-600'>
                           {exp.company}
                         </p>
-                        <p className='text-sm text-gray-300'>
+                        <p className='text-sm text-gray-700'>
                           {exp.description}
                         </p>
                         <span className='mt-2 inline-block rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-3 py-1 text-xs font-medium text-white'>
@@ -769,7 +769,7 @@ export const About: React.FC = () => {
                           {exp.tech.map((technology, techIndex) => (
                             <span
                               key={techIndex}
-                              className='rounded-md border border-blue-300/30 bg-white/10 px-2 py-1 text-xs font-medium text-blue-200'
+                              className='rounded-md border border-blue-200 bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700'
                             >
                               {technology}
                             </span>
@@ -779,7 +779,7 @@ export const About: React.FC = () => {
 
                       {/* 주요 성과 */}
                       <div className='space-y-2'>
-                        <h5 className='mb-2 text-sm font-semibold text-white'>
+                        <h5 className='mb-2 text-sm font-semibold text-gray-900'>
                           주요 성과
                         </h5>
                         {exp.achievements
@@ -789,14 +789,14 @@ export const About: React.FC = () => {
                               key={achievementIndex}
                               className='flex items-start gap-2'
                             >
-                              <div className='mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gradient-to-r from-blue-400 to-purple-400' />
-                              <span className='text-sm leading-relaxed text-gray-300'>
+                              <div className='mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gradient-to-r from-blue-600 to-purple-600' />
+                              <span className='text-sm leading-relaxed text-gray-700'>
                                 {achievement}
                               </span>
                             </div>
                           ))}
                         {exp.achievements.length > 3 && (
-                          <div className='mt-2 text-xs text-gray-400'>
+                          <div className='mt-2 text-xs text-gray-500'>
                             +{exp.achievements.length - 3}개 추가 성과
                           </div>
                         )}
@@ -808,7 +808,7 @@ export const About: React.FC = () => {
                   <div
                     className={`mt-4 w-full md:mt-0 md:w-5/12 ${index % 2 === 0 ? 'md:ml-auto md:pl-8' : 'md:mr-auto md:pr-8'}`}
                   >
-                    <div className='group transform rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-white/30'>
+                    <div className='group transform rounded-xl border border-gray-200 bg-white p-4 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-gray-300 hover:shadow-xl'>
                       {/* 메인 이미지 */}
                       <div
                         className='relative cursor-pointer overflow-hidden rounded-lg'
@@ -856,7 +856,7 @@ export const About: React.FC = () => {
                         {exp.images.slice(1).map((image, imageIndex) => (
                           <div
                             key={imageIndex + 1}
-                            className='h-12 w-16 flex-shrink-0 cursor-pointer overflow-hidden rounded border-2 border-white/20 transition-all duration-300 hover:border-white/60'
+                            className='h-12 w-16 flex-shrink-0 cursor-pointer overflow-hidden rounded border-2 border-gray-300 transition-all duration-300 hover:border-blue-500'
                             onClick={() =>
                               openGallery(
                                 exp.images,
@@ -876,7 +876,7 @@ export const About: React.FC = () => {
                       </div>
 
                       {/* 프로젝트 요약 정보 */}
-                      <div className='mt-3 flex items-center justify-between text-xs text-gray-400'>
+                      <div className='mt-3 flex items-center justify-between text-xs text-gray-600'>
                         <span>
                           프로젝트 기간:{' '}
                           {exp.period
@@ -884,7 +884,7 @@ export const About: React.FC = () => {
                             .map(date => date.slice(-5))
                             .join(' ~ ')}
                         </span>
-                        <span className='rounded bg-white/10 px-2 py-1'>
+                        <span className='rounded bg-gray-100 px-2 py-1'>
                           {exp.role === '프리랜서'
                             ? '외주'
                             : exp.role === '프리랜서 (PL)'
@@ -903,14 +903,14 @@ export const About: React.FC = () => {
         {/* 혁신적인 기술 스택 섹션 */}
         <AnimatedSection animation='fadeInUp' delay={200} className='mb-16'>
           <div className='mb-12 text-center'>
-            <h3 className='mb-4 text-3xl font-bold text-white md:text-4xl'>
+            <h3 className='mb-4 text-3xl font-bold text-gray-900 md:text-4xl'>
               Tech{' '}
-              <span className='bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>
+              <span className='bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent'>
                 Arsenal
               </span>
             </h3>
             <div className='mx-auto h-1 w-20 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500' />
-            <p className='mx-auto mt-4 max-w-2xl text-gray-300'>
+            <p className='mx-auto mt-4 max-w-2xl text-gray-700'>
               10년간 축적된 기술 스택과 전문성을 시각적으로 확인해보세요
             </p>
           </div>
@@ -942,10 +942,10 @@ export const About: React.FC = () => {
                   delay={100 + groupIndex * 100}
                   className='group relative'
                 >
-                  <div className='tech-stack-card group relative h-full transform overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-6 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:border-white/30 hover:shadow-xl hover:shadow-blue-500/10'>
+                  <div className='tech-stack-card group relative h-full transform overflow-hidden rounded-2xl border border-gray-200 bg-white p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:border-gray-300 hover:shadow-xl'>
                     {/* 카테고리 헤더 */}
                     <div className='relative z-10 mb-6 text-center'>
-                      <div className='mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 backdrop-blur-sm transition-all duration-300 group-hover:scale-105'>
+                      <div className='mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-100 to-purple-100 transition-all duration-300 group-hover:scale-105'>
                         <div className='text-xl'>
                           {groupIndex === 0 && '⚡'}
                           {groupIndex === 1 && '🛠️'}
@@ -955,7 +955,7 @@ export const About: React.FC = () => {
                           {groupIndex === 5 && '✨'}
                         </div>
                       </div>
-                      <h4 className='text-lg font-bold text-white transition-colors duration-300 group-hover:text-cyan-300'>
+                      <h4 className='text-lg font-bold text-gray-900 transition-colors duration-300 group-hover:text-blue-600'>
                         {skillGroup.category}
                       </h4>
                     </div>
@@ -969,18 +969,18 @@ export const About: React.FC = () => {
                         >
                           <div className='mb-2 flex items-center justify-between'>
                             <div className='flex items-center gap-3'>
-                              <div className='h-1.5 w-1.5 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-200 group-hover/item:scale-125' />
-                              <span className='text-sm font-medium text-gray-200 transition-colors duration-200 group-hover/item:text-white'>
+                              <div className='h-1.5 w-1.5 rounded-full bg-gradient-to-r from-cyan-600 to-blue-600 transition-all duration-200 group-hover/item:scale-125' />
+                              <span className='text-sm font-medium text-gray-700 transition-colors duration-200 group-hover/item:text-gray-900'>
                                 {tech.name}
                               </span>
                             </div>
-                            <span className='rounded-full bg-white/10 px-2 py-1 text-xs text-gray-400 transition-all duration-200 group-hover/item:bg-white/20 group-hover/item:text-white'>
+                            <span className='rounded-full bg-gray-100 px-2 py-1 text-xs text-gray-600 transition-all duration-200 group-hover/item:bg-blue-100 group-hover/item:text-blue-700'>
                               {tech.level}%
                             </span>
                           </div>
 
                           {/* 간소화된 프로그레스 바 */}
-                          <div className='relative h-1.5 overflow-hidden rounded-full bg-white/10'>
+                          <div className='relative h-1.5 overflow-hidden rounded-full bg-gray-200'>
                             <div
                               className={`h-full bg-gradient-to-r ${tech.color} rounded-full transition-all duration-700 ease-out`}
                               style={{ width: `${tech.level}%` }}
@@ -1002,7 +1002,7 @@ export const About: React.FC = () => {
           delay={300}
           className='text-center'
         >
-          <div className='mx-auto max-w-4xl rounded-xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl transition-all duration-300 hover:border-white/30'>
+          <div className='mx-auto max-w-4xl rounded-xl border border-gray-200 bg-white p-8 shadow-lg transition-all duration-300 hover:border-gray-300 hover:shadow-xl'>
             <div className='mb-8 flex items-center justify-center gap-4'>
               <div className='flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-r from-gray-700 to-gray-900'>
                 <svg
@@ -1015,10 +1015,10 @@ export const About: React.FC = () => {
               </div>
 
               <div className='text-left'>
-                <h4 className='mb-2 text-2xl font-bold text-white'>
+                <h4 className='mb-2 text-2xl font-bold text-gray-900'>
                   GitHub & MCP 서버
                 </h4>
-                <p className='text-gray-300'>
+                <p className='text-gray-700'>
                   최신 AI 기술과 연계된 오픈소스 프로젝트들
                 </p>
               </div>
@@ -1085,14 +1085,14 @@ export const About: React.FC = () => {
               ].map((project, index) => (
                 <div
                   key={index}
-                  className='rounded-xl border border-white/10 bg-white/5 p-4 transition-all duration-300 hover:border-white/30'
+                  className='rounded-xl border border-gray-200 bg-gray-50 p-4 transition-all duration-300 hover:border-gray-300 hover:shadow-md'
                 >
                   <div className='text-center'>
                     <div className='mb-2 text-2xl'>{project.icon}</div>
-                    <h6 className='mb-2 font-bold text-white'>
+                    <h6 className='mb-2 font-bold text-gray-900'>
                       {project.title}
                     </h6>
-                    <p className='mb-3 text-sm text-gray-300'>
+                    <p className='mb-3 text-sm text-gray-700'>
                       {project.description}
                     </p>
 
@@ -1112,7 +1112,7 @@ export const About: React.FC = () => {
                       {project.tags.map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
-                          className='rounded-full bg-white/10 px-2 py-1 text-xs text-gray-300'
+                          className='rounded-full bg-gray-100 px-2 py-1 text-xs text-gray-600'
                         >
                           {tag}
                         </span>

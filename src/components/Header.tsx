@@ -1,17 +1,17 @@
 import React, { useCallback, useMemo } from 'react';
 
 import {
-  SiAmazonwebservices,
-  SiFlutter,
-  SiGooglecloud,
-  SiKotlin,
-  SiNestjs,
-  SiNextdotjs,
-  SiPython,
-  SiReact,
-  SiSpringboot,
-  SiSpringsecurity,
-  SiTypescript,
+    SiAmazonwebservices,
+    SiFlutter,
+    SiGooglecloud,
+    SiKotlin,
+    SiNestjs,
+    SiNextdotjs,
+    SiPython,
+    SiReact,
+    SiSpringboot,
+    SiSpringsecurity,
+    SiTypescript,
 } from 'react-icons/si';
 
 import { AnimatedSection } from './AnimatedSection';
@@ -79,13 +79,13 @@ export const Header: React.FC = () => {
   }, []);
 
   return (
-    <header className='relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-950 to-blue-950'>
+    <header className='relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50'>
       {/* 최적화된 CSS 기반 배경 효과 */}
       <div className='absolute inset-0'>
         {/* 정적 그라데이션 배경 */}
-        <div className='absolute left-1/4 top-1/4 h-96 w-96 animate-pulse rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 blur-3xl filter' />
+        <div className='absolute left-1/4 top-1/4 h-96 w-96 animate-pulse rounded-full bg-gradient-to-r from-blue-100/30 to-purple-100/30 blur-3xl filter' />
         <div
-          className='absolute bottom-1/4 right-1/4 h-96 w-96 animate-pulse rounded-full bg-gradient-to-r from-cyan-500/10 to-pink-500/10 blur-3xl filter'
+          className='absolute bottom-1/4 right-1/4 h-96 w-96 animate-pulse rounded-full bg-gradient-to-r from-cyan-100/30 to-pink-100/30 blur-3xl filter'
           style={{ animationDelay: '2s' }}
         />
 
@@ -103,26 +103,26 @@ export const Header: React.FC = () => {
             {/* 인사말과 소개 */}
             <AnimatedSection animation='fadeInUp' className='space-y-6'>
               <div className='space-y-4'>
-                <h1 className='text-5xl font-black leading-tight text-white md:text-7xl'>
+                <h1 className='text-5xl font-black leading-tight text-gray-900 md:text-7xl'>
                   <span className='block'>Senior</span>
-                  <span className='bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent'>
+                  <span className='bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent'>
                     Full-Stack Developer
                   </span>
                 </h1>
-                <div className='text-2xl font-bold text-white md:text-3xl'>
-                  <span className='bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent'>
+                <div className='text-2xl font-bold text-gray-900 md:text-3xl'>
+                  <span className='bg-gradient-to-r from-emerald-600 to-cyan-600 bg-clip-text text-transparent'>
                     J.S
                   </span>
-                  <span className='text-gray-300'> here</span>
+                  <span className='text-gray-700'> here</span>
                 </div>
               </div>
 
-              <p className='mx-auto max-w-2xl text-lg leading-relaxed text-gray-300 md:text-xl lg:mx-0'>
-                <span className='font-semibold text-blue-300'>
+              <p className='mx-auto max-w-2xl text-lg leading-relaxed text-gray-700 md:text-xl lg:mx-0'>
+                <span className='font-semibold text-blue-600'>
                   10년 이상의 실무 경험
                 </span>
                 을 바탕으로
-                <span className='font-semibold text-emerald-400'>
+                <span className='font-semibold text-emerald-600'>
                   {' '}
                   Spring Boot, React, AWS
                 </span>
@@ -143,10 +143,10 @@ export const Header: React.FC = () => {
                   { number: '5+', label: 'Domains', icon: '🎯' },
                 ].map((stat, index) => (
                   <div key={index} className='text-center lg:text-left'>
-                    <div className='mb-1 text-sm text-gray-400'>
+                    <div className='mb-1 text-sm text-gray-600'>
                       {stat.icon} {stat.label}
                     </div>
-                    <div className='text-2xl font-bold text-white md:text-3xl'>
+                    <div className='text-2xl font-bold text-gray-900 md:text-3xl'>
                       {stat.number}
                     </div>
                   </div>
@@ -164,8 +164,8 @@ export const Header: React.FC = () => {
                 onClick={() => handleSmoothScroll('about')}
                 className='group relative overflow-hidden rounded-2xl bg-gradient-to-r from-blue-500 via-purple-600 to-cyan-500 p-[2px] transition-all duration-300 hover:scale-105 hover:shadow-[0_20px_50px_rgba(59,130,246,0.3)]'
               >
-                <div className='relative rounded-2xl bg-slate-900/80 px-8 py-4 backdrop-blur-xl transition-all duration-300 group-hover:bg-slate-900/60'>
-                  <span className='flex items-center justify-center gap-3 text-lg font-bold text-white'>
+                <div className='relative rounded-2xl bg-white/90 px-8 py-4 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/80'>
+                  <span className='flex items-center justify-center gap-3 text-lg font-bold text-gray-900'>
                     <span>경력 상세보기</span>
                     <svg
                       className='h-5 w-5 transition-transform duration-300 group-hover:translate-x-1'
@@ -186,9 +186,9 @@ export const Header: React.FC = () => {
 
               <button
                 onClick={() => handleSmoothScroll('contact')}
-                className='group rounded-2xl border border-white/20 bg-white/10 px-8 py-4 backdrop-blur-xl transition-all duration-300 hover:border-white/40 hover:bg-white/20'
+                className='group rounded-2xl border border-gray-300 bg-white/80 px-8 py-4 backdrop-blur-xl transition-all duration-300 hover:border-gray-400 hover:bg-white/90 hover:shadow-lg'
               >
-                <span className='flex items-center justify-center gap-3 text-lg font-bold text-white'>
+                <span className='flex items-center justify-center gap-3 text-lg font-bold text-gray-900'>
                   <span>프로젝트 문의</span>
                   <svg
                     className='h-5 w-5 transition-transform duration-300 group-hover:scale-110'
